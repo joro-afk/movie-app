@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+
+}
+
+
+@font-face {
+    font-family: 'spartan_mblight';
+    src: url('spartanmb-light.woff2') format('woff2'),
+        url('spartanmb-light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'Philosopher-Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Philosopher-Bold'), url('Philosopher-Bold.woff') format('woff');
+}
+
+
+
+@font-face {
+    font-family: 'Quattrocento Sans Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Quattrocento Sans Regular'), url('quattrocento-sans.regular.woff') format('woff');
+}
+
+.main-header {
+    width: 100vw;
+    height: 3rem;
+}
+
+.main-wrapper {
+    position: relative;
+    background-color: #e46a6b;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.main-footer {
+    background-color: #000;
+    bottom: 0;
+    width: 100vw;
+    height: 3rem;
+}
+
+nav{
+    margin-bottom: 2rem;
+}
+
+.menu-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    padding: 2rem 0;
+
+    height: 3rem;
+}
+
+.menu {
+    list-style: none;
+    margin-inline-end: 1rem;
+    margin-inline-start: 1rem;
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem;
+    line-height: 1.25;
+
+    font-family: 'Philosopher-Bold';
+}
+
+.menu:hover {
+    border-radius: 0.3rem;
+    background: #bdbdbd;
+    color: #000;
+
+}
+
+.swiper {
+    margin-bottom: 2rem;
+    height: calc(100vh - 14rem);
+}
+
+.swiper-slide {
+    display: flex !important;
+}
+
+
+.description-container {
+    padding: 1rem;
+    width: 50vw;
+
+}
+
+.title {
+    font-size: 2em;
+    margin-bottom: 1rem;
+    font-family: 'spartan_mblight';
+    color: #fff;
+}
+
+.score{
+    font-family: 'spartan_mblight';
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+
+.overview {
+    font-size: 1em;
+    font-family: 'Quattrocento Sans Regular';
+    color: #fff;
+}
