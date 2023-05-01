@@ -2,8 +2,12 @@
   <div>
     <nav>
       <ul class="menu-container">
-        <li class="menu">Now Playing Movies</li>
-        <li class="menu">Top Rated Movies</li>
+
+        <li class="menu" @click="films.setFilms()">Now Playing Movies</li>
+
+        <li class="menu" @click="films.setFilmsRated()">Top Rated Movies</li>
+
+
       </ul>
     </nav>
 

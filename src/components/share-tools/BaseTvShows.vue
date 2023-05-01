@@ -2,8 +2,10 @@
   <div>
     <nav>
       <ul class="menu-container">
-        <li class="menu">On the air Tv shows</li>
-        <li class="menu">Top rated Tv shows</li>
+        <li class="menu" @click="tvshows.setTvShows()">On the air Tv shows</li>
+        <li class="menu" @click="tvshows.setTvShowsRated()">
+          Top rated Tv shows
+        </li>
       </ul>
     </nav>
 
@@ -24,8 +26,11 @@
           :src="`http://image.tmdb.org/t/p/w500/${swiper.poster_path}`"
         />
         <div class="description-container">
-          <div class="title">{{ swiper.original_title }}</div>
+          <div class="title">{{ swiper.name }}</div>
+          <div class="title">{{ swiper.original_name }}</div>
           <div class="score">{{ swiper.vote_average }}</div>
+          <div class="score">{{ swiper.vote_count }}</div>
+          <div class="score">{{ swiper.popularity }}</div>
           <div class="overview">
             {{ swiper.overview }}
           </div>
