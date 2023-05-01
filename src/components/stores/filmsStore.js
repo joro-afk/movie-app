@@ -5,19 +5,34 @@ export const useFilmsStore = defineStore({
   state() {
     return {
       films: [],
-      page: 1,
+      tvshows: [],
     };
   },
 
   actions: {
     async setFilms() {
       await fetch(
-        `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&page=${this.page}
+        `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&sort_by=popularity.desc
         `
       )
         .then((resp) => resp.json())
         .then((data) => {
           this.films = data.results;
+          console.log(data.results);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+
+    async setTvShows() {
+      await fetch(
+        `https://api.themoviedb.org/3/discover/tv?api_key=${apiKey}&language=en-US&sort_by=popularity.desc
+        `
+      )
+        .then((resp) => resp.json())
+        .then((data) => {
+          this.tvshows = data.results;
           console.log(data.results);
         })
         .catch((error) => {

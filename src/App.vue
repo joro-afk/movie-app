@@ -11,6 +11,7 @@ export default {
   setup() {
     const films = useFilmsStore();
     films.setFilms();
+    films.setTvShows();
     return {
       films,
     };

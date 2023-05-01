@@ -2,8 +2,8 @@
   <div>
     <nav>
       <ul class="menu-container">
-        <li class="menu">Now Playing Movies</li>
-        <li class="menu">Top Rated Movies</li>
+        <li class="menu">On the air Tv shows</li>
+        <li class="menu">Top rated Tv shows</li>
       </ul>
     </nav>
 
@@ -18,7 +18,7 @@
       :modules="modules"
       class="mySwiper"
     >
-      <swiper-slide v-for="swiper in films.films" :key="swiper">
+      <swiper-slide v-for="swiper in tvshows.tvshows" :key="swiper">
         <img
           class="homeimage"
           :src="`http://image.tmdb.org/t/p/w500/${swiper.poster_path}`"
@@ -41,13 +41,13 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 
 export default {
-  name: "BaseFilms",
+  name: "BaseTvShows",
   components: {
     Swiper,
     SwiperSlide,
   },
   setup() {
-    const films = useFilmsStore();
+    const tvshows = useFilmsStore();
     const onSwiper = (swiper) => {
       console.log(swiper);
     };
@@ -57,7 +57,7 @@ export default {
     return {
       onSwiper,
       onSlideChange,
-      films,
+      tvshows,
       Virtual,
       modules: [Navigation, Pagination],
     };
