@@ -3,6 +3,12 @@ body {
 
 }
 
+@font-face {
+    font-family: 'Blockletter';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Blockletter'), url('Blockletter.woff') format('woff');
+}
 
 @font-face {
     font-family: 'spartan_mblight';
@@ -13,15 +19,12 @@ body {
 
 }
 
-
 @font-face {
     font-family: 'Philosopher-Bold';
     font-style: normal;
     font-weight: normal;
     src: local('Philosopher-Bold'), url('Philosopher-Bold.woff') format('woff');
 }
-
-
 
 @font-face {
     font-family: 'Quattrocento Sans Regular';
@@ -32,7 +35,6 @@ body {
 
 .main-header {
     width: 100vw;
-    height: 3rem;
 }
 
 .main-wrapper {
@@ -49,7 +51,56 @@ body {
     height: 3rem;
 }
 
-nav{
+.presentation {
+    position: relative;
+    height: calc(100vh - 3rem);
+}
+
+.presentation-container {
+    position: relative;
+    width: calc(100% - 6rem);
+    height: calc(100% - 9rem);
+    padding: 3rem 3rem 6rem 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.presentation-container>a {
+    text-decoration: none;
+}
+
+.presentation-container-2 {
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 0.25rem transparent;
+    border-radius: 0.5rem;
+}
+
+.presentation-container-2:hover {
+    border: solid 0.25rem black;
+    box-shadow: inset 20px 20px 60px #c25a5b,
+        inset -20px -20px 60px #ff7a7b;
+}
+
+.presentation-title {
+    font-family: 'Blockletter';
+    color: #000;
+    font-size: 3em;
+}
+
+.presentation-img {
+    height: 15rem;
+    width: 15rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+nav {
     margin-bottom: 2rem;
 }
 
@@ -62,7 +113,6 @@ nav{
     padding: 0;
     background-color: #000;
     padding: 2rem 0;
-
     height: 3rem;
 }
 
@@ -71,7 +121,7 @@ nav{
     margin-inline-end: 1rem;
     margin-inline-start: 1rem;
     color: white;
-    font-size: 2rem;
+    font-size: 2em;
     padding: 0.5rem;
     line-height: 1.25;
 
@@ -108,12 +158,11 @@ nav{
     color: #fff;
 }
 
-.score{
+.score {
     font-family: 'spartan_mblight';
     color: #fff;
     margin-bottom: 1rem;
 }
-
 
 .overview {
     font-size: 1em;
