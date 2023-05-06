@@ -1,0 +1,352 @@
+body {
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Blockletter';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Blockletter'), url('Blockletter.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'spartan_mblight';
+    src: url('spartanmb-light.woff2') format('woff2'),
+        url('spartanmb-light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Quattrocento Sans Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Quattrocento Sans Regular'), url('quattrocento-sans.regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Cocogoose Pro Ultralight-trial';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Cocogoose Pro Ultralight-trial'), url('Cocogoose Pro Ultralight-trial.woff') format('woff');
+}
+
+
+.main-header {
+    width: 100vw;
+}
+
+.main-wrapper {
+    position: relative;
+    background-color: #b9bdcc;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.main-footer {
+    background-color: #000;
+    bottom: 0;
+    width: 100vw;
+    height: 3rem;
+}
+
+.presentation {
+    position: relative;
+    height: calc(100vh - 3rem);
+    background-image: url('../assets/wallpaper.jpg');
+}
+
+.presentation-container {
+    position: relative;
+    width: calc(100% - 6rem);
+    height: calc(100% - 9rem);
+    padding: 3rem 3rem 6rem 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.presentation-container>a {
+    text-decoration: none;
+}
+
+.presentation-container-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    border: solid 0.25rem transparent;
+    border-radius: 0.5rem;
+    margin: 3rem;
+    -webkit-animation: presentation-container-2 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: presentation-container-2 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes presentation-container-2 {
+    0% {
+        -webkit-transform: translateZ(-80px);
+        transform: translateZ(-80px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+@keyframes presentation-container-2 {
+    0% {
+        -webkit-transform: translateZ(-80px);
+        transform: translateZ(-80px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+.presentation-container-2:hover {
+    border: solid 0.25rem #fff;
+    box-shadow: inset 20px 20px 60px #c25a5b,
+        inset -20px -20px 60px #ff7a7b;
+}
+
+.presentation-title {
+    font-family: 'Blockletter';
+    color: #fff;
+    font-size: 3em;
+}
+
+.presentation-img {
+    height: 15rem;
+    width: 15rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+nav {
+    margin-bottom: 2rem;
+}
+
+.menu-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    padding: 1rem 0;
+    height: 2.5rem;
+}
+
+.menu {
+    list-style: none;
+    margin-inline-end: 1rem;
+    margin-inline-start: 1rem;
+    color: #fff;
+    font-size: 1.5em;
+    padding: 0.5rem;
+    line-height: 1.25;
+    font-family: 'Blockletter';
+}
+
+.menu:hover {
+    border-radius: 0.3rem;
+    background: #bdbdbd;
+    color: #000;
+}
+
+.cart {
+    position: absolute;
+    right: 0;
+}
+
+.home {
+    position: absolute;
+    left: 0;
+}
+
+.swiper {
+    margin-bottom: 2rem;
+    height: calc(100vh - 11.5rem);
+    overflow: visible;
+}
+
+.swiper-slide {
+    display: flex !important;
+}
+
+.homeimage {
+    padding-inline-start: 3rem;
+    padding-inline-end: 3rem;
+}
+
+.side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.description-container {
+    padding: 1rem;
+    width: 50vw;
+}
+
+.title {
+    font-size: 2.2em;
+    margin-bottom: 1rem;
+    font-family: 'spartan_mblight';
+    color: #fff;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    margin-bottom: 2rem;
+    font-family: 'spartan_mblight';
+    color: #5e6b76;
+}
+
+.score-subtitle {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3rem;
+}
+
+
+.score {
+    font-size: 1.2em;
+    font-family: 'spartan_mblight';
+    color: #fff;
+
+}
+
+.air {
+    font-size: 1.2em;
+
+    font-family: 'spartan_mblight';
+    color: #5e6b76;
+    margin-inline-start: 1rem;
+}
+
+.average-rating {
+    font-size: 2em;
+    position: relative;
+    appearance: none;
+    color: transparent;
+    width: auto;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-bottom: 1.5rem
+}
+
+.average-rating::before {
+    content: "★★★★★★★★★★";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgba(0, 0, 0, 0.2);
+    -webkit-text-fill-color: transparent;
+}
+
+.overview {
+    font-size: 1em;
+    font-family: 'Quattrocento Sans Regular';
+    color: #fff;
+}
+
+.side-down {
+    background-color: #0a151f;
+    padding: 0.5rem;
+}
+
+.side-down-title {
+    font-size: 1.5em;
+    color: #5e6b76;
+    font-family: 'Cocogoose Pro Ultralight-trial';
+    margin-top: 0;
+}
+
+.side-down-subtitle {
+    font-size: 1em;
+    color: #5e6b76;
+    font-family: 'Cocogoose Pro Ultralight-trial';
+    margin-top: 0;
+}
+
+.purchate {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.purchate-ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.purchate-li {
+    display: flex;
+    list-style: none;
+    margin-inline-end: 1rem;
+}
+
+.li-button {
+    margin: 0;
+    padding: 0;
+    border: solid 2px transparent;
+    background-color: transparent;
+}
+
+.li-button.active {
+    border: solid 2px #fff;
+}
+
+.quality {
+    height: 3rem;
+    width: 3rem;
+    opacity: 1;
+    background-color: #5e6b76;
+}
+
+.quality:hover {
+    background-color: #fff;
+}
+
+.to-cart {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+}
+
+.to-cart>h3 {
+    color: #fff;
+    margin: 0;
+    line-height: 2.5;
+    font-family: 'Cocogoose Pro Ultralight-trial';
+    vertical-align: middle;
+}
+
+.purchate-button {
+    font-size: 1.2em;
+    border: 0;
+    margin-inline-start: 0.5rem;
+    font-family: 'Cocogoose Pro Ultralight-trial';
+    padding: 0.5rem;
+}
+
+.cart-main {
+    height: calc(100vh - 3rem);
+}
