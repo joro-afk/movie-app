@@ -1,22 +1,14 @@
 <template>
-
-<BaseFilms />
-
+  <BaseHome />
 </template>
 <script>
-
-import BaseFilms from '@/components/share-tools/BaseFilms'
+import BaseHome from "@/components/share-tools/BaseHome";
 
 export default {
   name: "Home-view",
-  setup() {
-    
-  },
+  setup() {},
   components: {
-    BaseFilms
-  }
-
-}
-
-
+    BaseHome,
+  },
+};
 </script>

@@ -7,8 +7,10 @@
             <img src="@/assets/home.png" class="home-img" alt="" />
           </li>
         </router-link>
-        <li class="menu" @click="films.setFilms()">Now Playing Movies</li>
-        <li class="menu" @click="films.setFilmsRated()">Top Rated Movies</li>
+        <li class="menu" @click="tvshows.setTvShows()">On the air Tv shows</li>
+        <li class="menu" @click="tvshows.setTvShowsRated()">
+          Top rated Tv shows
+        </li>
         <router-link to="/cart">
           <li class="menu cart">
             <img src="@/assets/cart.png" class="home-img" alt="" />
@@ -28,21 +30,24 @@
       :modules="modules"
       class="mySwiper"
     >
-      <swiper-slide v-for="swiper in films.films" :key="swiper">
+      <swiper-slide v-for="swiper in tvshows.tvshows" :key="swiper">
         <img
           class="homeimage"
           :src="`http://image.tmdb.org/t/p/w500/${swiper.poster_path}`"
         />
-
         <div class="side">
           <div class="description-container">
-            <div class="title">{{ swiper.title }}</div>
+            <div class="title">{{ swiper.name }}</div>
             <div class="subtitle">
-              Original title: {{ swiper.original_title }}
+              Original title: {{ swiper.original_name }}
             </div>
-            <div class="score">{{ swiper.vote_average }}</div>
-            <meter class="average-rating" min="0" max="10" ref="5"></meter>
-            <div class="overview">{{ swiper.overview }}</div>
+            <div class="score-subtitle">
+              <div class="score">{{ swiper.vote_average }}</div>
+              <div class="air">On Air since {{ swiper.first_air_date }}</div>
+            </div>
+            <div class="overview">
+              {{ swiper.overview }}
+            </div>
           </div>
 
           <div class="side-down">
@@ -107,13 +112,12 @@
                     /></label>
                   </li>
                 </ul>
-
                 <div class="to-cart">
                   <h3>us$ {{ picked }}</h3>
 
                   <button
                     class="purchate-button"
-                    @click="films.addToCart(swiper, picked)"
+                    @click="tvshows.addToCart(swiper, picked)"
                   >
                     Add to Cart
                   </button>
@@ -140,23 +144,24 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 
 export default {
-  name: "BaseFilms",
+  name: "BaseTvShows",
   components: {
     Swiper,
     SwiperSlide,
   },
   setup() {
-    const films = useFilmsStore();
+    const tvshows = useFilmsStore();
     const onSwiper = (swiper) => {
       console.log(swiper);
     };
     const onSlideChange = () => {
       console.log("slide change");
     };
+
     return {
       onSwiper,
       onSlideChange,
-      films,
+      tvshows,
       Virtual,
       modules: [Navigation, Pagination],
       picked: null,
