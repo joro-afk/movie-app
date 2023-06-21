@@ -6,7 +6,9 @@ export const useFilmsStore = defineStore({
     return {
       films: [],
       tvshows: [],
-      cart:[],
+      items: [],
+      total: [],
+      sum: null,
     };
   },
 
@@ -19,7 +21,6 @@ export const useFilmsStore = defineStore({
         .then((resp) => resp.json())
         .then((data) => {
           this.films = data.results;
-          console.log(data.results);
         })
         .catch((error) => {
           console.log(error);
@@ -34,7 +35,6 @@ export const useFilmsStore = defineStore({
         .then((resp) => resp.json())
         .then((data) => {
           this.films = data.results;
-          console.log(data.results);
         })
         .catch((error) => {
           console.log(error);
@@ -49,7 +49,6 @@ export const useFilmsStore = defineStore({
         .then((resp) => resp.json())
         .then((data) => {
           this.tvshows = data.results;
-          console.log(data.results);
         })
         .catch((error) => {
           console.log(error);
@@ -64,17 +63,66 @@ export const useFilmsStore = defineStore({
         .then((resp) => resp.json())
         .then((data) => {
           this.tvshows = data.results;
-          console.log(data.results);
         })
         .catch((error) => {
           console.log(error);
         });
     },
 
-      addToCart(swiper){
-        this.cart = swiper;
-        console.log(this.cart);
+    addToCart(swiper, picked) {
+      if (this.items.includes(swiper)) {
+        alert("Ya tienes esta pelicula");
+        return;
+      } else {
+        if (picked === null) {
+          alert("Debes elegir calidad");
+        } else {
+          let qty = "";
+          picked == 15
+            ? (qty = " 4k")
+            : picked == 10
+            ? (qty = " 1080q")
+            : picked == 7
+            ? (qty = " hq")
+            : (qty = " 480p");
+          swiper.quality = qty;
+          swiper.price = picked;
+          this.total.push(parseFloat(picked));
+          this.items.push(swiper);
+          this.totalsum();
+        }
       }
+    },
 
+    deleteMovie(index) {
+      let i;
+      for (i = 0; i < this.items.length; i++) {
+        if (this.items[i] === index) {
+          let resta = index.price * -1;
+          this.total.push(resta);
+          this.totalsum();
+          let place = this.items.indexOf(index);
+          this.items.splice(place, 1);
+          return;
+        }
+      }
+      console.log("No se encontro");
+      return;
+    },
+
+    totalsum() {
+      this.sum = this.total.reduce((x, y) => {
+        return x + y;
+      });
+    },
+
+    onChange(event, index) {
+      let changed = index.price * -1;
+      this.total.push(parseFloat(changed));
+      this.totalsum();
+      index.price = event.target.value;
+      this.total.push(parseFloat(index.price));
+      this.totalsum();
+    },
   },
 });

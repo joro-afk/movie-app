@@ -1,22 +1,14 @@
 <template>
-
-<BaseHome />
-
+  <BaseHome />
 </template>
 <script>
-
-import BaseHome from '@/components/share-tools/BaseHome'
+import BaseHome from "@/components/share-tools/BaseHome";
 
 export default {
   name: "Home-view",
-  setup() {
-    
-  },
+  setup() {},
   components: {
-   BaseHome
-  }
-
-}
-
-
+    BaseHome,
+  },
+};
 </script>

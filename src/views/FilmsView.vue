@@ -1,22 +1,14 @@
 <template>
-
-<BaseFilms />
-  
+  <BaseFilms />
 </template>
 <script>
-
-import BaseFilms from '@/components/share-tools/BaseFilms'
+import BaseFilms from "@/components/share-tools/BaseFilms";
 
 export default {
   name: "Films-View",
-  setup() {
-    
-  },
+  setup() {},
   components: {
-    BaseFilms
-  }
-
-}
-
-
+    BaseFilms,
+  },
+};
 </script>

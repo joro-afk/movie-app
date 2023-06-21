@@ -3,14 +3,19 @@
     <nav>
       <ul class="menu-container">
         <router-link to="/">
-          <li class="menu home">Home</li>
+          <li class="menu home">
+            <img src="@/assets/home.png" class="home-img" alt="" />
+          </li>
         </router-link>
         <li class="menu" @click="tvshows.setTvShows()">On the air Tv shows</li>
         <li class="menu" @click="tvshows.setTvShowsRated()">
           Top rated Tv shows
         </li>
         <router-link to="/cart">
-          <li class="menu cart">Cart</li>
+          <li class="menu cart">
+            <img src="@/assets/cart.png" class="home-img" alt="" />
+            <p class="cart-amount">{{tvshows.items.length}}</p>
+          </li>
         </router-link>
       </ul>
     </nav>
@@ -34,44 +39,86 @@
         <div class="side">
           <div class="description-container">
             <div class="title">{{ swiper.name }}</div>
-            <div class="subtitle">Original title: {{ swiper.original_name }}</div>
-           <div class="score-subtitle">
-            <div class="score">{{ swiper.vote_average }}</div>
-            <div class="air">On Air since {{ swiper.first_air_date}}</div>
-          </div>
+            <div class="subtitle">
+              Original title: {{ swiper.original_name }}
+            </div>
+            <div class="score-subtitle">
+              <div class="score">{{ swiper.vote_average }}</div>
+              <div class="air">On Air since {{ swiper.first_air_date }}</div>
+            </div>
             <div class="overview">
               {{ swiper.overview }}
             </div>
           </div>
+
           <div class="side-down">
+            <div class="opinion-menu"></div>
             <h1 class="side-down-title">Watch Now</h1>
             <div>
               <h1 class="side-down-title">Quality options</h1>
               <div class="purchate">
                 <ul class="purchate-ul">
                   <li class="purchate-li">
-                    <img src="@/assets/480-pixels.png" class="quality" alt="" />
-                  </li>
-                  <li class="purchate-li">
-                    <img
-                      src="@/assets/high-quality.png"
-                      class="quality"
-                      alt=""
+                    <input
+                      type="radio"
+                      name="q-options"
+                      value="4"
+                      v-model="picked"
+                      id="cb1"
                     />
+                    <label for="cb1"
+                      ><img
+                        src="@/assets/480-pixels.png"
+                        class="quality"
+                        alt=""
+                    /></label>
                   </li>
                   <li class="purchate-li">
-                    <img src="@/assets/1080.png" class="quality" alt="" />
+                    <input
+                      type="radio"
+                      name="q-options"
+                      value="7"
+                      v-model="picked"
+                      id="cb2"
+                    />
+                    <label for="cb2">
+                      <img
+                        src="@/assets/high-quality.png"
+                        class="quality"
+                        alt=""
+                    /></label>
                   </li>
                   <li class="purchate-li">
-                    <img src="@/assets/4k.png" class="quality" alt="" />
+                    <input
+                      type="radio"
+                      name="q-options"
+                      value="10"
+                      v-model="picked"
+                      id="cb3"
+                    />
+                    <label for="cb3">
+                      <img src="@/assets/1080.png" class="quality" alt=""
+                    /></label>
+                  </li>
+                  <li class="purchate-li">
+                    <input
+                      type="radio"
+                      name="q-options"
+                      value="15"
+                      v-model="picked"
+                      id="cb4"
+                    />
+                    <label for="cb4">
+                      <img src="@/assets/4k.png" class="quality" alt=""
+                    /></label>
                   </li>
                 </ul>
                 <div class="to-cart">
-                  <h3>Price</h3>
+                  <h3>us$ {{ picked }}</h3>
 
                   <button
                     class="purchate-button"
-                    @click="tvshows.addToCart(swiper)"
+                    @click="tvshows.addToCart(swiper, picked)"
                   >
                     Add to Cart
                   </button>
@@ -82,6 +129,13 @@
         </div>
       </swiper-slide>
     </swiper>
+    <div class="alert-container">
+      <div class="alert-message">
+        <h1 class="message">
+          Upps! It seems like you already have this in your cart
+        </h1>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -104,12 +158,14 @@ export default {
     const onSlideChange = () => {
       console.log("slide change");
     };
+
     return {
       onSwiper,
       onSlideChange,
       tvshows,
       Virtual,
       modules: [Navigation, Pagination],
+      picked: null,
     };
   },
 };

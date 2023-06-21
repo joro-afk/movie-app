@@ -1,7 +1,5 @@
 <template>
-  <footer class="main-footer">
-
-    </footer>
+  <footer class="main-footer"></footer>
 </template>
 <script>
 export default {

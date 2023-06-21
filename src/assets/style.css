@@ -40,7 +40,7 @@ body {
 
 .main-wrapper {
     position: relative;
-    background-color: #b9bdcc;
+    background-image: url('../assets/AbstractPaper.svg');
     width: 100%;
     min-height: 100vh;
 }
@@ -69,6 +69,18 @@ body {
     text-decoration: none;
 }
 
+@media only screen and (max-width: 750px) {
+    .presentation-container {
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 1rem;
+        margin: 0;
+        height: calc(100% - 2rem);
+        width: calc(100% - 2rem);
+    }
+}
+
+
 .presentation-container>a {
     text-decoration: none;
 }
@@ -84,6 +96,7 @@ body {
     margin: 3rem;
     -webkit-animation: presentation-container-2 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: presentation-container-2 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    color: #808080;
 }
 
 @-webkit-keyframes presentation-container-2 {
@@ -118,13 +131,21 @@ body {
     border: solid 0.25rem #fff;
     box-shadow: inset 20px 20px 60px #c25a5b,
         inset -20px -20px 60px #ff7a7b;
+    color: #fff;
 }
+
+@media only screen and (max-width: 750px) {
+    .presentation-container-2 {
+        margin: 1rem;
+    }
+}
+
 
 .presentation-title {
     font-family: 'Blockletter';
-    color: #fff;
     font-size: 3em;
 }
+
 
 .presentation-img {
     height: 15rem;
@@ -135,6 +156,11 @@ body {
 
 nav {
     margin-bottom: 2rem;
+}
+
+h3 {
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 .menu-container {
@@ -150,6 +176,9 @@ nav {
 }
 
 .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     list-style: none;
     margin-inline-end: 1rem;
     margin-inline-start: 1rem;
@@ -161,9 +190,7 @@ nav {
 }
 
 .menu:hover {
-    border-radius: 0.3rem;
-    background: #bdbdbd;
-    color: #000;
+    color: #B6C2D9;
 }
 
 .cart {
@@ -171,9 +198,34 @@ nav {
     right: 0;
 }
 
+.cart:hover {
+    background-color: #B6C2D9;
+    border-radius: 0.2rem;
+}
+
 .home {
     position: absolute;
     left: 0;
+}
+
+.home:hover {
+    background-color: #B6C2D9;
+    border-radius: 0.2rem;
+}
+
+.home-img {
+    height: 1.5rem;
+    background-color: #fff;
+    border-radius: 0.2rem;
+}
+
+.cart-amount {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #ffbf00;
+    font-family: 'Blockletter';
+    margin-top: 0;
 }
 
 .swiper {
@@ -184,6 +236,7 @@ nav {
 
 .swiper-slide {
     display: flex !important;
+    justify-content: space-around;
 }
 
 .homeimage {
@@ -203,17 +256,17 @@ nav {
 }
 
 .title {
-    font-size: 2.2em;
+    font-size: 2.7em;
     margin-bottom: 1rem;
     font-family: 'spartan_mblight';
     color: #fff;
 }
 
 .subtitle {
-    font-size: 1.5em;
+    font-size: 2em;
     margin-bottom: 2rem;
     font-family: 'spartan_mblight';
-    color: #5e6b76;
+    color: #ffbf00;
 }
 
 .score-subtitle {
@@ -224,17 +277,16 @@ nav {
 
 
 .score {
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-family: 'spartan_mblight';
     color: #fff;
 
 }
 
 .air {
-    font-size: 1.2em;
-
+    font-size: 1.25em;
     font-family: 'spartan_mblight';
-    color: #5e6b76;
+    color: #bab8b5;
     margin-inline-start: 1rem;
 }
 
@@ -259,15 +311,31 @@ nav {
 }
 
 .overview {
-    font-size: 1em;
+    font-size: 1.3em;
     font-family: 'Quattrocento Sans Regular';
     color: #fff;
 }
+
 
 .side-down {
     background-color: #0a151f;
     padding: 0.5rem;
 }
+
+.opinion-menu {
+    height: 2rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.option-menu-symbols {
+    height: 1.5rem;
+    padding: 0.25rem 0.5rem;
+    background-color: #b9bdcc;
+    margin-inline-start: 0.25rem;
+}
+
 
 .side-down-title {
     font-size: 1.5em;
@@ -303,15 +371,8 @@ nav {
     margin-inline-end: 1rem;
 }
 
-.li-button {
-    margin: 0;
-    padding: 0;
-    border: solid 2px transparent;
-    background-color: transparent;
-}
-
-.li-button.active {
-    border: solid 2px #fff;
+input[type="radio"][id^="cb"] {
+    display: block;
 }
 
 .quality {
@@ -325,6 +386,10 @@ nav {
     background-color: #fff;
 }
 
+:checked+label>.quality {
+    background-color: #fff;
+}
+
 .to-cart {
     display: flex !important;
     flex-direction: row;
@@ -335,7 +400,7 @@ nav {
     color: #fff;
     margin: 0;
     line-height: 2.5;
-    font-family: 'Cocogoose Pro Ultralight-trial';
+    font-family: 'Quattrocento Sans Regular';
     vertical-align: middle;
 }
 
@@ -348,5 +413,147 @@ nav {
 }
 
 .cart-main {
-    height: calc(100vh - 3rem);
+    min-height: calc(100vh - 3rem);
+}
+
+.views {
+    display: flex;
+    flex-direction: row;
+    width: 20rem;
+}
+
+.views>li {
+    list-style: none;
+    width: 50%;
+    text-align: center;
+}
+
+.views>li>a {
+    text-decoration: none;
+}
+
+.cart-returns {
+    margin: 0;
+    padding: 0.5rem;
+    margin-inline-start: 1rem;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Blockletter';
+    font-weight: 500;
+}
+
+.cart-returns:hover {
+    color: #B6C2D9;
+}
+
+.li-cart {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem;
+    align-items: center;
+    border: solid 1px #000;
+    margin: 0.2rem 1.5rem;
+    border-radius: 0.2rem;
+}
+
+.cart-divs {
+    width: calc(100% / 6);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-image {
+    height: 8rem;
+}
+
+.cart-title,
+.cart-quality,
+.cart-price {
+    padding-right: 1rem;
+    font-family: 'spartan_mblight';
+}
+
+.cart-quality {
+    font-size: 1em;
+    color: #fff;
+}
+
+.cart-title {
+    color: #fff;
+}
+
+#quality {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#qty {
+    height: 2rem;
+    border-radius: 0.2rem;
+    background-color: #4d7ea8;
+    border: 1px #fff solid;
+}
+
+.cart-button {
+    height: 2rem;
+    background-color: #000;
+    border: 0;
+    color: #fff;
+    border-radius: 0.2rem;
+}
+
+.total {
+    position: sticky;
+    background-color: #4d7ea8;
+    height: 3rem;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: row;
+    top: calc(100vh - 3rem);
+
+}
+
+.total-containers {
+    width: calc(100% /6);
+    height: 100%;
+    font-family: 'spartan_mblight';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+}
+
+.alert-message {
+    position: absolute;
+    height: 10rem;
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #005192;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    top: calc(50% - 5rem);
+    left: calc(50% - 10rem);
+}
+
+.message {
+    color: #fff;
+    font-family: 'spartan_mblight';
+    font-size: 2rem;
+}
+
+p {
+    color: #fff;
 }

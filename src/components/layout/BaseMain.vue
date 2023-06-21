@@ -1,13 +1,11 @@
 <template>
-    <main role="main">
-       <router-view />
-    </main>
+  <main role="main">
+    <router-view />
+  </main>
 </template>
 <script>
 export default {
-    name:'BaseMain',
-    setup() {
-        
-    },
-}
+  name: "BaseMain",
+  setup() {},
+};
 </script>

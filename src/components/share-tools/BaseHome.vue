@@ -8,7 +8,7 @@
         </div>
       </router-link>
       <router-link to="/tvshows">
-      <div class="presentation-container-2">
+        <div class="presentation-container-2">
           <h1 class="presentation-title">TV Shows</h1>
           <img src="@/assets/tv-show.jpg" alt="" class="presentation-img" />
         </div>

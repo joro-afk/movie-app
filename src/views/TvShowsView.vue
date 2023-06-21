@@ -1,22 +1,14 @@
 <template>
-
-<BaseTvShows />
-  
+  <BaseTvShows />
 </template>
 <script>
-
-import BaseTvShows from  '@/components/share-tools/BaseTvShows'
+import BaseTvShows from "@/components/share-tools/BaseTvShows";
 
 export default {
   name: "TvShows-View",
-  setup() {
-    
-  },
+  setup() {},
   components: {
-    BaseTvShows
-  }
-
-}
-
-
+    BaseTvShows,
+  },
+};
 </script>

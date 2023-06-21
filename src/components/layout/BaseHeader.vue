@@ -1,7 +1,5 @@
 <template>
-  <header class="main-header">
-    
-  </header>
+  <header class="main-header"></header>
 </template>
 <script>
 export default {
