@@ -36,7 +36,7 @@
           </h2>
         </div>
         <div class="cart-divs" id="quality">
-          <h2 class="cart-quality">Quality now:  {{ index.quality }}</h2>
+          <h2 class="cart-quality">Quality choosen:  {{ index.quality }}</h2>
           <select
             name="quality"
             id="qty"
