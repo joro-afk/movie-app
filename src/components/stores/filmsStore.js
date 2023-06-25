@@ -71,17 +71,40 @@ export const useFilmsStore = defineStore({
 
     addToCart(swiper, picked) {
       if (this.items.includes(swiper)) {
-        alert("Ya tienes esta pelicula");
+        const element = document.querySelector(".alert-container");
+        element.style.display = "block";
         return;
       } else {
         if (picked === null) {
-          alert("Debes elegir calidad");
+          const element = document.querySelector(".alert-container-2");
+          element.style.display = "block";
         } else {
+          let qty = "";
+          picked == 15
+            ? (qty = " 4K")
+            : picked == 10
+            ? (qty = " 1080Q")
+            : picked == 7
+            ? (qty = " HQ")
+            : (qty = " 480P");
+          const element = document.querySelector(".alert-container-3");
+          element.style.display = "block";
+          this.timeout();
+          swiper.quality = qty;
           swiper.price = picked;
           this.total.push(parseFloat(picked));
           this.items.push(swiper);
           this.totalsum();
         }
+      }
+    },
+
+    timeout() {
+      setTimeout(timeout, 2000);
+      function timeout() {
+        const element = document.querySelector(".alert-container-3");
+        element.style.display = "none";
+       
       }
     },
 
@@ -111,9 +134,22 @@ export const useFilmsStore = defineStore({
       let changed = index.price * -1;
       this.total.push(parseFloat(changed));
       this.totalsum();
-      index.price = event.target.value;
+      index.price = event.target.value.price;
+      console.log(index.price);
+      index.quality = event.target.value.qty;
+      console.log(index.quality);
       this.total.push(parseFloat(index.price));
       this.totalsum();
+    },
+
+    closeButton() {
+      const element = document.querySelector(".alert-container");
+      element.style.display = "none";
+    },
+
+    closeButton2() {
+      const element = document.querySelector(".alert-container-2");
+      element.style.display = "none";
     },
   },
 });
