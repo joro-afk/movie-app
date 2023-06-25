@@ -7,6 +7,7 @@ body {
     font-style: normal;
     font-weight: normal;
     src: local('Blockletter'), url('Blockletter.woff') format('woff');
+    font-display: swap;
 }
 
 @font-face {
@@ -15,6 +16,7 @@ body {
         url('spartanmb-light.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 
@@ -24,6 +26,7 @@ body {
     font-style: normal;
     font-weight: normal;
     src: local('Quattrocento Sans Regular'), url('quattrocento-sans.regular.woff') format('woff');
+    font-display: swap;
 }
 
 @font-face {
@@ -31,6 +34,7 @@ body {
     font-style: normal;
     font-weight: normal;
     src: local('Cocogoose Pro Ultralight-trial'), url('Cocogoose Pro Ultralight-trial.woff') format('woff');
+    font-display: swap;
 }
 
 
