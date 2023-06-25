@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="principal">
     <nav>
       <ul class="menu-container">
         <router-link to="/">
@@ -14,6 +14,7 @@
         <router-link to="/cart">
           <li class="menu cart">
             <img src="@/assets/cart.png" class="home-img" alt="" />
+            <p class="cart-amount">{{ tvshows.items.length }}</p>
           </li>
         </router-link>
       </ul>
@@ -51,10 +52,9 @@
           </div>
 
           <div class="side-down">
-            <div class="opinion-menu"></div>
             <h1 class="side-down-title">Watch Now</h1>
             <div>
-              <h1 class="side-down-title">Quality options</h1>
+              <h1 class="side-down-subtitle">Quality options</h1>
               <div class="purchate">
                 <ul class="purchate-ul">
                   <li class="purchate-li">
@@ -114,7 +114,6 @@
                 </ul>
                 <div class="to-cart">
                   <h3>us$ {{ picked }}</h3>
-
                   <button
                     class="purchate-button"
                     @click="tvshows.addToCart(swiper, picked)"
@@ -128,11 +127,29 @@
         </div>
       </swiper-slide>
     </swiper>
+
     <div class="alert-container">
+      <div class="alert-back"></div>
       <div class="alert-message">
+        <button class="alert-button" @click="tvshows.closeButton()">X</button>
         <h1 class="message">
           Upps! It seems like you already have this in your cart
         </h1>
+      </div>
+    </div>
+    <div class="alert-container-2">
+      <div class="alert-back"></div>
+      <div class="alert-message-2">
+        <button class="alert-button-2" @click="tvshows.closeButton2()">
+          X
+        </button>
+        <h1 class="message-2">You must choose quality first...</h1>
+      </div>
+    </div>
+
+    <div class="alert-container-3">
+      <div class="alert-message-3">
+        <h2 class="message-3">Added to your cart</h2>
       </div>
     </div>
   </div>

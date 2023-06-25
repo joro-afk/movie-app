@@ -35,13 +35,17 @@
             {{ index.original_title }} {{ index.name }}
           </h2>
         </div>
-        <div class="cart-divs">
-          <h2 class="cart-quality">Quality</h2>
-          <select name="quality" id="qty" @change="cart.onChange($event, index)">
-            <option value="4">480</option>
-            <option value="7">HQ</option>
-            <option value="10">1080</option>
-            <option value="15">4K</option>
+        <div class="cart-divs" id="quality">
+          <h2 class="cart-quality">Quality choosen: {{ index.quality }}</h2>
+          <select
+            name="quality"
+            id="qty"
+            @change="cart.onChange($event, index)"
+          >
+            <option value='{"price":"7", "qty":"HQ"}'>480Q</option>
+            <option value='{"price":"7", "qty":"HQ"}'>HQ</option>
+            <option value='{"price":"7", "qty":"HQ"}'>1080</option>
+            <option value='{"price":"7", "qty":"HQ"}'>4K</option>
           </select>
         </div>
 
@@ -50,7 +54,9 @@
         </div>
 
         <div class="cart-divs">
-          <button @click="cart.deleteMovie(index)"><h3>x</h3></button>
+          <button @click="cart.deleteMovie(index)" class="cart-button">
+            <h3>x</h3>
+          </button>
         </div>
       </li>
     </div>
