@@ -71,7 +71,7 @@ footer>h2 {
 .presentation {
     position: relative;
     height: calc(100vh - 3rem);
-    background-image: url('../assets/wallpaper.jpg');
+    background-image: url('../assets/wallpaper.png');
 }
 
 .presentation-container {
