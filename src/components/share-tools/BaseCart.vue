@@ -36,16 +36,16 @@
           </h2>
         </div>
         <div class="cart-divs" id="quality">
-          <h2 class="cart-quality">Quality choosen:  {{ index.quality }}</h2>
+          <h2 class="cart-quality">Quality choosen: {{ index.quality }}</h2>
           <select
             name="quality"
             id="qty"
             @change="cart.onChange($event, index)"
           >
-            <option value="4">480</option>
-            <option value="7">HQ</option>
-            <option value="10">1080</option>
-            <option value="15">4K</option>
+            <option value='{"price":"7", "qty":"HQ"}'>480Q</option>
+            <option value='{"price":"7", "qty":"HQ"}'>HQ</option>
+            <option value='{"price":"7", "qty":"HQ"}'>1080</option>
+            <option value='{"price":"7", "qty":"HQ"}'>4K</option>
           </select>
         </div>
 
