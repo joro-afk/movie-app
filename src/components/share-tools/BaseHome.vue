@@ -4,13 +4,13 @@
       <router-link to="/films">
         <div class="presentation-container-2">
           <h1 class="presentation-title">Films</h1>
-          <img src="@/assets/cinema.png" alt="" class="presentation-img" />
+          <img src="@/assets/images/cinema.png" alt="" class="presentation-img" />
         </div>
       </router-link>
       <router-link to="/tvshows">
         <div class="presentation-container-2">
           <h1 class="presentation-title">TV Shows</h1>
-          <img src="@/assets/tv.png" alt="" class="presentation-img" />
+          <img src="@/assets/images/tv.png" alt="" class="presentation-img" />
         </div>
       </router-link>
     </div>
