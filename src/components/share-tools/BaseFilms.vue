@@ -4,14 +4,14 @@
       <ul class="menu-container">
         <router-link to="/">
           <li class="menu home">
-            <img src="@/assets/home.png" class="home-img" alt="" />
+            <img src="@/assets/images/home.png" class="home-img" alt="" />
           </li>
         </router-link>
         <li class="menu" @click="films.setFilms()">Now Playing Movies</li>
         <li class="menu" @click="films.setFilmsRated()">Top Rated Movies</li>
         <router-link to="/cart">
           <li class="menu cart">
-            <img src="@/assets/cart.png" class="home-img" alt="" />
+            <img src="@/assets/images/cart.png" class="home-img" alt="" />
             <p class="cart-amount">{{ films.items.length }}</p>
           </li>
         </router-link>
@@ -62,7 +62,7 @@
                     />
                     <label for="cb1"
                       ><img
-                        src="@/assets/480-pixels.png"
+                        src="@/assets/images/480-pixels.png"
                         class="quality"
                         alt=""
                     /></label>
@@ -77,7 +77,7 @@
                     />
                     <label for="cb2">
                       <img
-                        src="@/assets/high-quality.png"
+                        src="@/assets/images/high-quality.png"
                         class="quality"
                         alt=""
                     /></label>
@@ -91,7 +91,7 @@
                       id="cb3"
                     />
                     <label for="cb3">
-                      <img src="@/assets/1080.png" class="quality" alt=""
+                      <img src="@/assets/images/1080.png" class="quality" alt=""
                     /></label>
                   </li>
                   <li class="purchate-li">
@@ -103,7 +103,7 @@
                       id="cb4"
                     />
                     <label for="cb4">
-                      <img src="@/assets/4k.png" class="quality" alt=""
+                      <img src="@/assets/images/4k.png" class="quality" alt=""
                     /></label>
                   </li>
                 </ul>
