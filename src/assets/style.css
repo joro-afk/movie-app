@@ -115,6 +115,7 @@ footer>h2 {
 .presentation-container-2 {
     height: calc(100% - 0.5rem);
        width: min-content;
+        max-width: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
