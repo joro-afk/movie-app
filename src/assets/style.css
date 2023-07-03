@@ -44,21 +44,21 @@ body {
 
 .main {
     position: relative;
-    height: calc(100vh - .5rem);
+    height: calc(100vh - 1rem);
 }
 
 .main-footer {
     background-color: #000;
     bottom: 0;
     width: 100vw;
-    height: .5rem;
+    height: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .principal {
-    padding-bottom: 2rem;
+    height: 100%;
     background: #bdc3c7;
     background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
     background: linear-gradient(to right, #2c3e50, #bdc3c7);
@@ -91,6 +91,19 @@ footer>h2 {
 }
 
 
+@media only screen and (min-height:900px) and (min-width:600px) {
+    .presentation-container {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width:900px) {
+    .presentation-container {
+        flex-direction: row;
+    }
+}
+
+
 .presentation-container>a {
     text-decoration: none;
     height: 40%;
@@ -114,8 +127,8 @@ footer>h2 {
 
 .presentation-container-2 {
     height: calc(100% - 0.5rem);
-       width: min-content;
-        max-width: 20rem;
+    width: min-content;
+    max-width: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -153,7 +166,7 @@ footer>h2 {
 }
 
 nav {
-    margin-bottom: 2rem;
+    height: min-content;
 }
 
 h3 {
@@ -162,30 +175,35 @@ h3 {
 }
 
 .menu-container {
-    width: 100vw;
+    width: 100%;
+    height: 1.5rem;
     display: flex;
+    margin: 0;
     flex-direction: row;
     justify-content: center;
-    margin: 0;
-    padding: 0;
     background-color: #000;
-    padding: 1rem 0;
-    height: 2.5rem;
+    padding: 0;
 }
+
+
 
 .menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
     list-style: none;
-    margin-inline-end: 1rem;
-    margin-inline-start: 1rem;
     color: #fff;
-    font-size: 1.5em;
-    padding: 0.5rem;
-    line-height: 1.25;
+    font-size: .5em;
     font-family: 'Blockletter';
+    margin-inline-end: .5rem;
 }
+
+@media only screen and (min-height:390px) {
+    .menu {
+        font-size: .6em;
+    }
+}
+
 
 .menu:hover {
     color: #B6C2D9;
@@ -194,6 +212,8 @@ h3 {
 .cart {
     position: absolute;
     right: 0;
+    margin-top: .25rem;
+    margin-right: .25rem;
 }
 
 .cart:hover {
@@ -204,6 +224,8 @@ h3 {
 .home {
     position: absolute;
     left: 0;
+    margin-top: .25rem;
+    margin-left: .25rem;
 }
 
 .home:hover {
@@ -212,109 +234,162 @@ h3 {
 }
 
 .home-img {
-    height: 1.5rem;
+    height: 1rem;
     background-color: #fff;
     border-radius: 0.2rem;
+    z-index: 1000;
 }
 
 .cart-amount {
     position: absolute;
     right: 0;
-    bottom: 0;
-    color: #ffbf00;
+    color: #e3e4e5;
     font-family: 'Blockletter';
     margin-top: 0;
+    margin-right: 0;
+    z-index: 1001;
+    font-size: 1.5em;
 }
 
 .swiper {
-    height: calc(100vh - 11.5rem);
+    height: calc(100% - 1.5rem);
     overflow: visible;
 }
 
 .swiper-slide {
     display: flex !important;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
+.img-container {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (min-height:480px) {
+    .img-container {
+        width: 45%;
+    }
+}
+
+
+@media only screen and (min-height:600px) and (min-width:480px) {
+    .img-container {
+        width: 30%;
+    }
+}
+
+
 .homeimage {
-    padding-inline-start: 3rem;
-    padding-inline-end: 3rem;
+    width: 100%;
 }
 
 .side {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    height: 100%;
+    width: 50%;
 }
 
+@media only screen and (min-height:480px) {
+    .side {
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-height:480px)and (min-width:600px) {
+    .side {
+        justify-content: space-evenly;
+    }
+}
+
+
+
 .description-container {
-    padding: 1rem;
-    width: 50vw;
+    width: 100%;
+    padding: .1rem;
+    margin-top: .5rem;
 }
 
 .title {
-    font-size: 2.7em;
-    margin-bottom: 1rem;
+    font-size: 1em;
     font-family: 'spartan_mblight';
     color: #fff;
+    margin-bottom: .5rem;
 }
 
+
+@media only screen and (min-height:390px) {
+    .title {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (min-height:720px) {
+    .title {
+        font-size: 2em;
+    }
+}
+
+
 .subtitle {
-    font-size: 2em;
-    margin-bottom: 2rem;
+    font-size: 0.5em;
     font-family: 'spartan_mblight';
     color: #ffbf00;
+    margin-bottom: .5rem;
+}
+
+@media only screen and (min-height:390px) {
+    .subtitle {
+        font-size: .8em;
+    }
 }
 
 .score-subtitle {
     display: flex;
     flex-direction: row;
-    margin-bottom: 3rem;
+    margin-bottom: .5rem;
 }
 
-
 .score {
-    font-size: 1.5em;
+    font-size: .5em;
     font-family: 'spartan_mblight';
     color: #fff;
-
 }
 
 .air {
-    font-size: 1.25em;
+    font-size: .25em;
     font-family: 'spartan_mblight';
     color: #bab8b5;
     margin-inline-start: 1rem;
 }
 
-.average-rating {
-    font-size: 2em;
-    position: relative;
-    appearance: none;
-    color: transparent;
-    width: auto;
-    display: inline-block;
-    vertical-align: baseline;
-    margin-bottom: 1.5rem
-}
-
-.average-rating::before {
-    content: "★★★★★★★★★★";
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: rgba(0, 0, 0, 0.2);
-    -webkit-text-fill-color: transparent;
-}
-
 .overview {
-    font-size: 1.3em;
+    font-size: .5em;
     font-family: 'Quattrocento Sans Regular';
     color: #fff;
+    margin-bottom: .5rem;
+}
+
+@media only screen and (min-height:480px) {
+    .overview {
+        font-size: .6em;
+    }
+}
+
+@media only screen and (min-height:720px) {
+    .overview {
+        font-size: 1em;
+    }
 }
 
 
 .side-down {
+    height: min-content;
     background: rgb(2, 0, 36);
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 81, 146, 1) 35%, rgba(0, 215, 255, 1) 100%);
     padding: 0.5rem;
@@ -337,14 +412,20 @@ h3 {
 
 
 .side-down-title {
-    font-size: 1.5em;
+    font-size: .5em;
     color: #fff;
     font-family: 'Cocogoose Pro Ultralight-trial';
     margin-top: 0;
 }
 
+@media only screen and (min-height:576px) {
+    .side-down-title {
+        font-size: 1em;
+    }
+}
+
 .side-down-subtitle {
-    font-size: 1em;
+    font-size: .5em;
     color: #fff;
     font-family: 'Cocogoose Pro Ultralight-trial';
     margin-top: 0;
@@ -354,6 +435,7 @@ h3 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
 }
 
 .purchate-ul {
@@ -365,21 +447,43 @@ h3 {
 }
 
 .purchate-li {
-    display: flex;
     list-style: none;
-    margin-inline-end: 1rem;
+    margin-inline-end: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 input[type="radio"][id^="cb"] {
     display: block;
+    height: .5rem;
+    margin: 3px;
 }
 
 .quality {
-    height: 3rem;
-    width: 3rem;
+    height: 1rem;
+    width: 1rem;
     opacity: 1;
     background-color: #5e6b76;
 }
+
+@media only screen and (min-height:720px) {
+    .quality {
+        height: 2rem;
+        width: 2rem;
+        margin-inline-end: .5rem;
+    }
+}
+
+@media only screen and (min-height:720px) and (max-width:600px) {
+    .quality {
+        height: 1.5rem;
+        width: 1.5rem;
+        margin-inline-end: .5rem;
+    }
+}
+
 
 .quality:hover {
     background-color: #fff;
@@ -396,6 +500,7 @@ input[type="radio"][id^="cb"] {
 }
 
 .to-cart>h3 {
+    font-size: .5em;
     color: #fff;
     margin: 0;
     line-height: 2.5;
@@ -403,14 +508,20 @@ input[type="radio"][id^="cb"] {
     vertical-align: middle;
 }
 
-.purchate-button {
-    font-size: 1.2em;
-    border: 0;
-    margin-inline-start: 0.5rem;
-    font-family: 'Cocogoose Pro Ultralight-trial';
-    padding: 0.5rem;
-    border-radius: 0.2rem;
 
+@media only screen and (min-width:500px) {
+    .to-cart>h3 {
+        font-size: .75em;
+    }
+}
+
+.purchate-button {
+    margin-inline-start: 2px;
+    font-size: .25em;
+    border: 0;
+    font-family: 'Cocogoose Pro Ultralight-trial';
+    border-radius: 0.2rem;
+    padding: 2px;
 }
 
 .cart-main {
