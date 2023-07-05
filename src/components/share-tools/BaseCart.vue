@@ -4,7 +4,7 @@
       <ul class="menu-container">
         <router-link to="/">
           <li class="menu home">
-            <img src="@/assets/home.png" class="home-img" alt="" />
+            <img src="@/assets/images/home.png" class="home-img" alt="" />
           </li>
         </router-link>
         <div class="views">

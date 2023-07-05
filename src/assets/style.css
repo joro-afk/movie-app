@@ -7,6 +7,7 @@ body {
     font-style: normal;
     font-weight: normal;
     src: local('Blockletter'), url('Blockletter.woff') format('woff');
+    font-display: swap;
 }
 
 @font-face {
@@ -15,6 +16,7 @@ body {
         url('spartanmb-light.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 
@@ -24,6 +26,7 @@ body {
     font-style: normal;
     font-weight: normal;
     src: local('Quattrocento Sans Regular'), url('quattrocento-sans.regular.woff') format('woff');
+    font-display: swap;
 }
 
 @font-face {
@@ -31,6 +34,7 @@ body {
     font-style: normal;
     font-weight: normal;
     src: local('Cocogoose Pro Ultralight-trial'), url('Cocogoose Pro Ultralight-trial.woff') format('woff');
+    font-display: swap;
 }
 
 
@@ -40,22 +44,21 @@ body {
 
 .main {
     position: relative;
-    width: 100%;
-    min-height: calc(100vh - 3rem);
+    height: calc(100vh - 1rem);
 }
 
 .main-footer {
     background-color: #000;
     bottom: 0;
     width: 100vw;
-    height: 3rem;
+    height: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .principal {
-    padding-bottom: 2rem;
+    height: 100%;
     background: #bdc3c7;
     background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
     background: linear-gradient(to right, #2c3e50, #bdc3c7);
@@ -65,81 +68,105 @@ footer>h2 {
     color: #fff;
     font-family: 'spartan_mblight';
     margin: 0;
-    font-size: .8em;
+    font-size: .4em;
 }
 
 .presentation {
     position: relative;
-    height: calc(100vh - 3rem);
-    background-image: url('../assets/wallpaper.jpg');
+    height: 100%;
+    background-image: url('../assets/images/wallpaper.png');
+    background-size: contain;
 }
 
 .presentation-container {
     position: relative;
-    width: calc(100% - 6rem);
-    height: calc(100% - 9rem);
-    padding: 3rem 3rem 6rem 3rem;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    text-decoration: none;
+    padding: .25rem;
+    margin: 0;
+    height: calc(100% - .5rem);
+    width: calc(100% - .5rem);
 }
 
-@media only screen and (max-width: 750px) {
+
+@media only screen and (min-height:900px) and (min-width:600px) {
     .presentation-container {
-        flex-direction: column;
-        justify-content: space-evenly;
-        padding: 1rem;
-        margin: 0;
-        height: calc(100% - 2rem);
-        width: calc(100% - 2rem);
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width:900px) {
+    .presentation-container {
+        flex-direction: row;
     }
 }
 
 
 .presentation-container>a {
     text-decoration: none;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (min-height:600px) {
+    .presentation-container>a {
+        height: 35%;
+    }
+}
+
+@media only screen and (min-height:700px) {
+    .presentation-container>a {
+        height: 30%;
+    }
 }
 
 .presentation-container-2 {
+    height: calc(100% - 0.5rem);
+    width: min-content;
+    max-width: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    border: solid 0.25rem #000;
-    border-radius: 0.3rem;
-    margin: 3rem;
+    padding: 0.125rem;
+    border: solid 0.1rem #fff;
+    margin: 0;
     -webkit-animation: presentation-container-2 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: presentation-container-2 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     color: #000;
 }
 
 .presentation-container-2:hover {
-    border: solid 0.25rem #C0C0C0;
-    color: #C0C0C0;
+    border: solid 0.1rem #000;
+    color: #fff;
 }
 
-@media only screen and (max-width: 750px) {
-    .presentation-container-2 {
-        margin: 1rem;
+.presentation-title {
+    position: absolute;
+    font-family: 'Blockletter';
+    font-size: 1.5em;
+}
+
+@media only screen and (min-height:800px) {
+    .presentation-title {
+        font-size: 2em;
     }
 }
 
 
-.presentation-title {
-    font-family: 'Blockletter';
-    font-size: 3em;
-}
-
 
 .presentation-img {
-    height: 15rem;
-    width: 15rem;
+    height: 100%;
 }
 
 nav {
-    margin-bottom: 2rem;
+    height: min-content;
 }
 
 h3 {
@@ -148,30 +175,35 @@ h3 {
 }
 
 .menu-container {
-    width: 100vw;
+    width: 100%;
+    height: 1.5rem;
     display: flex;
+    margin: 0;
     flex-direction: row;
     justify-content: center;
-    margin: 0;
-    padding: 0;
     background-color: #000;
-    padding: 1rem 0;
-    height: 2.5rem;
+    padding: 0;
 }
+
+
 
 .menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
     list-style: none;
-    margin-inline-end: 1rem;
-    margin-inline-start: 1rem;
     color: #fff;
-    font-size: 1.5em;
-    padding: 0.5rem;
-    line-height: 1.25;
+    font-size: .5em;
     font-family: 'Blockletter';
+    margin-inline-end: .5rem;
 }
+
+@media only screen and (min-height:390px) {
+    .menu {
+        font-size: .6em;
+    }
+}
+
 
 .menu:hover {
     color: #B6C2D9;
@@ -180,6 +212,8 @@ h3 {
 .cart {
     position: absolute;
     right: 0;
+    margin-top: .25rem;
+    margin-right: .25rem;
 }
 
 .cart:hover {
@@ -190,6 +224,8 @@ h3 {
 .home {
     position: absolute;
     left: 0;
+    margin-top: .25rem;
+    margin-left: .25rem;
 }
 
 .home:hover {
@@ -198,113 +234,229 @@ h3 {
 }
 
 .home-img {
-    height: 1.5rem;
+    height: 1rem;
     background-color: #fff;
     border-radius: 0.2rem;
+    z-index: 1000;
 }
 
 .cart-amount {
     position: absolute;
     right: 0;
-    bottom: 0;
-    color: #ffbf00;
+    color: #e3e4e5;
     font-family: 'Blockletter';
     margin-top: 0;
+    margin-right: 0;
+    z-index: 1001;
+    font-size: 1.5em;
 }
 
 .swiper {
-    height: calc(100vh - 11.5rem);
+    height: calc(100% - 1.25rem);
     overflow: visible;
 }
 
 .swiper-slide {
     display: flex !important;
-    justify-content: space-around;
+    justify-content: space-evenly;
+}
+
+@media only screen and (min-height:576px) {
+    .swiper-slide {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
+
+@media only screen and (min-height:576px) and (min-width:600px) {
+    .swiper-slide {
+        flex-direction: row;
+    }
+}
+
+.img-container {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (min-height:480px) {
+    .img-container {
+        width: 45%;
+    }
+}
+
+@media only screen and (min-height:576px) {
+    .img-container {
+        width: 100%;
+        height: calc(50% - 2px);
+    }
+}
+
+@media only screen and (min-height:576px) and (min-width:600px) {
+    .img-container {
+        height: 100%;
+    }
 }
 
 .homeimage {
-    padding-inline-start: 3rem;
-    padding-inline-end: 3rem;
+    width: 100%;
+    max-width: 17rem;
+    max-height: 27rem;
+}
+
+@media only screen and (min-height:576px) {
+    .homeimage {
+        height: 98%;
+        width: auto;
+    }
 }
 
 .side {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    height: 100%;
+    width: 50%;
 }
 
+@media only screen and (min-height:576px) {
+    .side {
+        width: calc(100% - 1rem);
+        height: calc(50% - 2px);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 .5rem;
+    }
+}
+
+@media only screen and (min-height:576px) and (min-width:600px) {
+    .side {
+        height: 100%;
+        justify-content: space-around;
+    }
+}
+
+
 .description-container {
-    padding: 1rem;
-    width: 50vw;
+    width: 100%;
+    padding: .1rem;
+    margin-top: .5rem;
 }
 
 .title {
-    font-size: 2.7em;
-    margin-bottom: 1rem;
+    font-size: 1em;
     font-family: 'spartan_mblight';
     color: #fff;
+    margin-bottom: .5rem;
+}
+
+@media only screen and (min-height:390px) {
+    .title {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (min-height:720px) {
+    .title {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (min-height:480px)and (min-width:900px) {
+    .title {
+        font-size: 2em;
+    }
 }
 
 .subtitle {
-    font-size: 2em;
-    margin-bottom: 2rem;
+    font-size: 0.5em;
     font-family: 'spartan_mblight';
     color: #ffbf00;
+    margin-bottom: .5rem;
+}
+
+@media only screen and (min-height:390px) {
+    .subtitle {
+        font-size: .8em;
+    }
 }
 
 .score-subtitle {
     display: flex;
     flex-direction: row;
-    margin-bottom: 3rem;
+    margin-bottom: .5rem;
 }
 
-
 .score {
-    font-size: 1.5em;
+    font-size: .5em;
     font-family: 'spartan_mblight';
     color: #fff;
-
 }
 
 .air {
-    font-size: 1.25em;
+    font-size: .25em;
     font-family: 'spartan_mblight';
     color: #bab8b5;
     margin-inline-start: 1rem;
 }
 
-.average-rating {
-    font-size: 2em;
-    position: relative;
-    appearance: none;
-    color: transparent;
-    width: auto;
-    display: inline-block;
-    vertical-align: baseline;
-    margin-bottom: 1.5rem
-}
-
-.average-rating::before {
-    content: "★★★★★★★★★★";
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: rgba(0, 0, 0, 0.2);
-    -webkit-text-fill-color: transparent;
-}
-
 .overview {
-    font-size: 1.3em;
+    font-size: .5em;
     font-family: 'Quattrocento Sans Regular';
     color: #fff;
+    margin-bottom: .5rem;
+}
+
+@media only screen and (min-height:480px)and (min-width:570px) {
+    .overview {
+        font-size: .9em;
+    }
+}
+
+@media only screen and (min-height:480px)and (min-width:1000px) {
+    .overview {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (min-height:576px) and (min-width:400px) {
+    .overview {
+        font-size: .7em;
+    }
+}
+
+@media only screen and (min-height:576px) and (min-width:600px) {
+    .overview {
+        font-size: .8em;
+    }
+}
+
+@media only screen and (min-height:576px) and (min-width:1000px) {
+    .overview {
+        font-size: .9em;
+    }
 }
 
 
 .side-down {
+    height: min-content;
     background: rgb(2, 0, 36);
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 81, 146, 1) 35%, rgba(0, 215, 255, 1) 100%);
-    padding: 0.5rem;
+    padding: 0.25rem;
     border-radius: 0.2rem;
+    max-width: 35rem;
+}
+
+@media only screen and (min-height:576px) {
+    .side-down {
+        min-width: 15rem;
+    }
 }
 
 .opinion-menu {
@@ -323,24 +475,72 @@ h3 {
 
 
 .side-down-title {
-    font-size: 1.5em;
+    font-size: .5em;
     color: #fff;
     font-family: 'Cocogoose Pro Ultralight-trial';
     margin-top: 0;
 }
 
+@media only screen and (min-height:480px) {
+    .side-down-title {
+        font-size: .75em;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-height:480px)and (min-width:500px) {
+    .side-down-title {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (min-height:576px)and (min-width:500px) {
+    .side-down-title {
+        font-size: .8em;
+    }
+}
+
 .side-down-subtitle {
-    font-size: 1em;
+    font-size: .5em;
     color: #fff;
     font-family: 'Cocogoose Pro Ultralight-trial';
     margin-top: 0;
 }
+
+@media only screen and (min-height:480px) {
+    .side-down-subtitle {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-height:480px)and (min-width:500px) {
+    .side-down-subtitle {
+        font-size: .8em;
+
+    }
+}
+
+@media only screen and (min-height:576px)and (min-width:500px) {
+    .side-down-subtitle {
+        font-size: .5em;
+    }
+}
+
 
 .purchate {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
 }
+
+@media only screen and (min-height:480px) {
+    .purchate {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 
 .purchate-ul {
     display: flex;
@@ -351,21 +551,61 @@ h3 {
 }
 
 .purchate-li {
-    display: flex;
     list-style: none;
-    margin-inline-end: 1rem;
+    margin-inline-end: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 input[type="radio"][id^="cb"] {
     display: block;
+    height: .5rem;
+    margin: 3px;
 }
 
 .quality {
-    height: 3rem;
-    width: 3rem;
+    height: 1rem;
+    width: 1rem;
     opacity: 1;
     background-color: #5e6b76;
 }
+
+
+@media only screen and (min-height:500px) {
+    .quality {
+        height: 1.5rem;
+        width: 1.5rem;
+        margin-inline-end: .5rem;
+    }
+}
+
+@media only screen and (min-height:720px) {
+    .quality {
+        height: 2rem;
+        width: 2rem;
+        margin-inline-end: .5rem;
+    }
+}
+
+@media only screen and (min-height:720px) and (max-width:600px) {
+    .quality {
+        height: 1.5rem;
+        width: 1.5rem;
+        margin-inline-end: .5rem;
+    }
+}
+
+@media only screen and (min-height:480px)and (min-width:900px) {
+    .quality {
+        height: 2rem;
+        width: 2rem;
+
+    }
+}
+
+
 
 .quality:hover {
     background-color: #fff;
@@ -382,6 +622,7 @@ input[type="radio"][id^="cb"] {
 }
 
 .to-cart>h3 {
+    font-size: .5em;
     color: #fff;
     margin: 0;
     line-height: 2.5;
@@ -389,15 +630,54 @@ input[type="radio"][id^="cb"] {
     vertical-align: middle;
 }
 
-.purchate-button {
-    font-size: 1.2em;
-    border: 0;
-    margin-inline-start: 0.5rem;
-    font-family: 'Cocogoose Pro Ultralight-trial';
-    padding: 0.5rem;
-    border-radius: 0.2rem;
 
+
+
+@media only screen and (min-width:500px) {
+    .to-cart>h3 {
+        font-size: .75em;
+    }
 }
+
+@media only screen and (min-height:480px)and (min-width:900px) {
+    .to-cart>h3 {
+        font-size: 1em;
+
+    }
+}
+
+
+.purchate-button {
+    margin-inline-start: 2px;
+    font-size: .25em;
+    border: 0;
+    font-family: 'Cocogoose Pro Ultralight-trial';
+    border-radius: 0.2rem;
+    padding: 2px;
+}
+
+
+@media only screen and (min-height:480px) {
+    .purchate-button {
+        font-size: .3em;
+    }
+}
+
+@media only screen and (min-height:480px)and (min-width:500px) {
+    .purchate-button {
+        font-size: .5em;
+
+    }
+}
+
+
+
+@media only screen and (min-height:480px)and (min-width:900px) {
+    .purchate-button {
+        font-size: .8em;
+    }
+}
+
 
 .cart-main {
     min-height: calc(100vh - 3rem);
@@ -551,7 +831,7 @@ input[type="radio"][id^="cb"] {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../assets/meteor.svg');
+    background-image: url('../assets/images/meteor.png');
     border-radius: 0.5rem;
     text-align: center;
     padding: 1rem;
