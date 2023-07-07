@@ -48,7 +48,7 @@
 
           <div class="side-down">
             <h1 class="side-down-title">Watch Now</h1>
-            <div>
+            <div class="subtitle-container">
               <h1 class="side-down-subtitle">Quality options</h1>
               <div class="purchate">
                 <ul class="purchate-ul">

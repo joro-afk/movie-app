@@ -7,6 +7,7 @@
           <img src="@/assets/images/cinema.png" alt="" class="presentation-img" />
         </div>
       </router-link>
+      <div class="middle-container"></div>
       <router-link to="/tvshows">
         <div class="presentation-container-2">
           <h1 class="presentation-title">TV Shows</h1>

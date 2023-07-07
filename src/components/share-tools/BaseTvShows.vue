@@ -32,12 +32,12 @@
       class="mySwiper"
     >
       <swiper-slide v-for="swiper in tvshows.tvshows" :key="swiper">
-<div class="img-container">
-        <img
-          class="homeimage"
-          :src="`http://image.tmdb.org/t/p/w500/${swiper.poster_path}`"
-        />
-      </div>
+        <div class="img-container">
+          <img
+            class="homeimage"
+            :src="`http://image.tmdb.org/t/p/w500/${swiper.poster_path}`"
+          />
+        </div>
         <div class="side">
           <div class="description-container">
             <div class="title">{{ swiper.name }}</div>
@@ -55,7 +55,7 @@
 
           <div class="side-down">
             <h1 class="side-down-title">Watch Now</h1>
-            <div>
+            <div class="subtitle-container">
               <h1 class="side-down-subtitle">Quality options</h1>
               <div class="purchate">
                 <ul class="purchate-ul">
@@ -98,7 +98,10 @@
                       id="cb3"
                     />
                     <label for="cb3">
-                      <img src="@/assets/images/1080.png" class="quality" alt=""
+                      <img
+                        src="@/assets/images/1080.png"
+                        class="quality"
+                        alt=""
                     /></label>
                   </li>
                   <li class="purchate-li">
