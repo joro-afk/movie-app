@@ -1,5 +1,5 @@
 <template>
-  <div class="cart-main">
+  <div class="cart-main" lang="en">
     <nav>
       <ul class="menu-container">
         <router-link to="/">

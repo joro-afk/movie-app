@@ -1,5 +1,5 @@
 <template>
-  <div class="presentation">
+  <div class="presentation" lang="en">
     <div class="presentation-container">
       <router-link to="/films">
         <div class="presentation-container-2">

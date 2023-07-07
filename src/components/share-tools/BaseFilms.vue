@@ -1,5 +1,5 @@
 <template>
-  <div class="principal">
+  <div class="principal" lang="en">
     <nav>
       <ul class="menu-container">
         <router-link to="/">
