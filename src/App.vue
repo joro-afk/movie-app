@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div lang="en">
     <BaseLayout />
   </div>
 </template>
