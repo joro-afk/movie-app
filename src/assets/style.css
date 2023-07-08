@@ -74,8 +74,8 @@ footer>h2 {
 .presentation {
     position: relative;
     height: 100%;
-    background-image: url('../assets/images/wallpaper.png');
-    background-size: contain;
+    background-image: url(../assets/images/wallpaper.png);
+    background-size: cover;
 }
 
 .presentation-container {
@@ -141,13 +141,12 @@ footer>h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
     padding: 0.125rem;
-    border: solid 0.1rem #fff;
+    border: solid 0.25rem #4c4e50;
     margin: 0;
     -webkit-animation: presentation-container-2 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: presentation-container-2 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    color: #000;
+    color: #4c4e50;
 }
 
 
@@ -170,10 +169,8 @@ footer>h2 {
     }
 }
 
-
-
 .presentation-container-2:hover {
-    border: solid 0.1rem #000;
+    border: solid 0.25rem #fff;
     color: #fff;
 }
 
