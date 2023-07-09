@@ -1,5 +1,5 @@
 <template>
-  <div class="principal">
+  <div class="principal" lang="en">
     <nav>
       <ul class="menu-container">
         <router-link to="/">
@@ -30,25 +30,24 @@
       class="mySwiper"
     >
       <swiper-slide v-for="swiper in films.films" :key="swiper">
-        <img
-          class="homeimage"
-          :src="`http://image.tmdb.org/t/p/w500/${swiper.poster_path}`"
-        />
-
+        <div class="img-container">
+          <img
+            class="homeimage"
+            :src="`http://image.tmdb.org/t/p/w500/${swiper.poster_path}`"
+          />
+        </div>
         <div class="side">
           <div class="description-container">
             <div class="title">{{ swiper.title }}</div>
             <div class="subtitle">
               Original title: {{ swiper.original_title }}
             </div>
-            <div class="score">{{ swiper.vote_average }}</div>
-            <meter class="average-rating" min="0" max="10" ref="5"></meter>
             <div class="overview">{{ swiper.overview }}</div>
           </div>
 
           <div class="side-down">
             <h1 class="side-down-title">Watch Now</h1>
-            <div>
+            <div class="subtitle-container">
               <h1 class="side-down-subtitle">Quality options</h1>
               <div class="purchate">
                 <ul class="purchate-ul">
@@ -91,7 +90,10 @@
                       id="cb3"
                     />
                     <label for="cb3">
-                      <img src="@/assets/images/1080.png" class="quality" alt=""
+                      <img
+                        src="@/assets/images/1080.png"
+                        class="quality"
+                        alt=""
                     /></label>
                   </li>
                   <li class="purchate-li">
@@ -174,7 +176,7 @@ export default {
       films,
       Virtual,
       modules: [Navigation, Pagination],
-      picked: null,
+      picked:0,
     };
   },
 };
