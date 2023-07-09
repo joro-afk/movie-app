@@ -222,6 +222,12 @@ footer>h2 {
     background: linear-gradient(to right, #2c3e50, #bdc3c7);
 }
 
+@media only screen and (min-width: 600px) {
+    .principal {
+        height: calc(100vh - 1.5rem);
+    }
+}
+
 nav {
     height: min-content;
 }
@@ -261,6 +267,13 @@ h3 {
     margin-inline-end: .5rem;
 }
 
+@media only screen and (min-width:600px) {
+    .menu {
+        font-size: .725em;
+        margin-inline-end: 1rem;
+    }
+}
+
 @media only screen and (min-height:390px) {
     .menu {
         font-size: .625em;
@@ -276,6 +289,13 @@ h3 {
     display: flex;
     flex-direction: row;
 }
+
+@media only screen and (min-width:600px) {
+    .cart {
+        margin-inline-end: .5rem;
+    }
+}
+
 
 .cart:hover {
     background-color: #B6C2D9;
@@ -300,7 +320,6 @@ h3 {
     color: #e3e4e5;
     font-family: 'Blockletter';
     z-index: 1001;
-    font-size: 1.5em;
 }
 
 
@@ -463,6 +482,12 @@ h3 {
     margin-bottom: .5rem;
 }
 
+@media only screen and (min-width:400px) {
+    .title {
+        font-size: 1.25em;
+    }
+}
+
 @media only screen and (min-height:390px) {
     .title {
         font-size: 1.5em;
@@ -488,6 +513,12 @@ h3 {
     margin-bottom: .5rem;
 }
 
+
+@media only screen and (min-width:400px) {
+    .subtitle {
+        font-size: .725em;
+    }
+}
 
 
 
@@ -529,6 +560,13 @@ h3 {
     .overview {
         margin-right: 25%;
         max-width: 300px;
+    }
+}
+
+
+@media only screen and (min-width:850px) {
+    .overview {
+        font-size: .625em;
     }
 }
 
@@ -747,7 +785,7 @@ input[type="radio"][id^="cb"] {
 
 @media only screen and (min-width:500px) {
     .to-cart>h3 {
-        font-size: .75em;
+        font-size: .65em;
     }
 }
 
