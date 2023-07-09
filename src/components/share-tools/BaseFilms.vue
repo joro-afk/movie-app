@@ -12,6 +12,8 @@
         <router-link to="/cart">
           <li class="menu cart">
             <img src="@/assets/images/cart.png" class="home-img" alt="" />
+          </li>
+          <li class="menu">
             <p class="cart-amount">{{ films.items.length }}</p>
           </li>
         </router-link>
@@ -42,6 +44,7 @@
             <div class="subtitle">
               Original title: {{ swiper.original_title }}
             </div>
+
             <div class="overview">{{ swiper.overview }}</div>
           </div>
 
@@ -176,7 +179,7 @@ export default {
       films,
       Virtual,
       modules: [Navigation, Pagination],
-      picked:0,
+      picked: 0,
     };
   },
 };
