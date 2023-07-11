@@ -242,6 +242,12 @@ footer>h2 {
 }
 
 
+@media only screen and (min-height:640px) and (min-width:600px) {
+    .principal {
+        height: calc(100vh - 1.5rem);
+    }
+}
+
 nav {
     height: min-content;
 }
@@ -342,6 +348,13 @@ h3 {
     margin: 0;
 }
 
+@media only screen and (min-height:640px) and (min-width:600px) {
+    .swiper {
+        height: calc(100vh - 1.5rem);
+    }
+}
+
+
 .swiper-slide {
     display: flex !important;
     flex-direction: column;
@@ -364,6 +377,7 @@ h3 {
     .swiper-slide {
         flex-direction: column;
         justify-content: space-evenly;
+        align-items: center;
     }
 }
 
@@ -423,7 +437,7 @@ h3 {
 
 @media only screen and (min-height:576px) and (min-width:600px) {
     .img-container {
-        height: 100%;
+        height: calc(100vh - 3.25rem);
         padding-right: 0;
     }
 }
@@ -503,7 +517,7 @@ h3 {
 @media only screen and (min-height:576px) and (min-width:600px) {
     .side {
         width: calc(100% - 1rem);
-        height: 100vh;
+        height: calc(100vh - 3rem);
         justify-content: center;
         align-items: flex-start;
     }
@@ -550,6 +564,7 @@ h3 {
 @media only screen and (min-height:576px) and (min-width:600px) {
     .description-container {
         margin-bottom: 0;
+        padding: .5rem;
     }
 }
 
@@ -598,6 +613,13 @@ h3 {
     }
 }
 
+@media only screen and (min-height:640px)and (min-width:900px) {
+    .title {
+        font-size: 2em;
+    }
+}
+
+
 .subtitle {
     font-size: 0.5em;
     font-family: 'spartan_mblight';
@@ -637,6 +659,12 @@ h3 {
     }
 }
 
+@media only screen and (min-height:640px)and (min-width:900px) {
+    .subtitle {
+        font-size: 1.2em;
+    }
+}
+
 
 .score-subtitle {
     display: flex;
@@ -662,20 +690,7 @@ h3 {
     font-family: 'Quattrocento Sans Regular';
     color: #fff;
     margin-bottom: .25rem;
-}
-
-@media only screen and (min-width:400px) and (max-height:479px) {
-    .overview {
-        max-width: 500px;
-    }
-}
-
-@media only screen and (min-width:400px) and (min-height:480px) {
-    .overview {
-        text-align: center;
-        margin: 0;
-        max-width: none;
-    }
+    max-width: 500px;
 }
 
 @media only screen and (min-width:850px) {
@@ -683,6 +698,7 @@ h3 {
         font-size: .625em;
     }
 }
+
 
 @media only screen and (min-height:480px)and (min-width:400px) {
     .overview {
@@ -695,7 +711,6 @@ h3 {
 @media only screen and (min-height:480px)and (min-width:600px) {
     .overview {
         font-size: .75em;
-        max-width: 500px;
         text-align: start;
     }
 }
@@ -715,8 +730,8 @@ h3 {
 
 @media only screen and (min-height:576px) and (min-width:600px) {
     .overview {
-        font-size: .75em;
-
+        font-size: .8em;
+        margin: .5rem 0;
     }
 }
 
@@ -725,6 +740,14 @@ h3 {
         font-size: .9em;
     }
 }
+
+@media only screen and (min-height:600px) and (min-height:640px) {
+    .purchate-button {
+        font-size: .8em;
+
+    }
+}
+
 
 .side-down {
     width: calc(100% - 1.5rem);
@@ -934,6 +957,14 @@ input[type="radio"][id^="cb"] {
     }
 }
 
+@media only screen and (min-height:600px) and (min-height:640px) {
+    .to-cart>h3 {
+        font-size: .8em;
+
+    }
+}
+
+
 .purchate-button {
     margin-inline-start: 2px;
     font-size: .25em;
@@ -968,6 +999,14 @@ input[type="radio"][id^="cb"] {
         font-size: .625em;
     }
 }
+
+@media only screen and (min-height:600px) and (min-height:640px) {
+    .purchate-button {
+        font-size: .8em;
+
+    }
+}
+
 
 .cart-main {
     min-height: calc(100vh - 3rem);
