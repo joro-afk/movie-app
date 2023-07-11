@@ -631,8 +631,9 @@ h3 {
 
 @media only screen and (min-height:480px)and (min-width:400px) {
     .overview {
+        text-align: justify;
         font-size: .7em;
-        margin: 0 10%;
+        margin: 1rem 0;
     }
 }
 
