@@ -19,8 +19,6 @@ body {
     font-display: swap;
 }
 
-
-
 @font-face {
     font-family: 'Quattrocento Sans Regular';
     font-style: normal;
@@ -36,7 +34,6 @@ body {
     src: local('Cocogoose Pro Ultralight-trial'), url('Cocogoose Pro Ultralight-trial.woff') format('woff');
     font-display: swap;
 }
-
 
 .main-header {
     width: 100vw;
@@ -61,7 +58,6 @@ body {
     }
 }
 
-
 footer>h2 {
     color: #fff;
     font-family: 'spartan_mblight';
@@ -70,13 +66,11 @@ footer>h2 {
     vertical-align: middle;
 }
 
-
 @media only screen and (min-width:400px) {
     footer>h2 {
         font-size: .6em;
     }
 }
-
 
 .presentation {
     position: relative;
@@ -92,7 +86,6 @@ footer>h2 {
         height: calc(100vh - 1.5rem);
     }
 }
-
 
 .presentation-container {
     position: relative;
@@ -155,7 +148,6 @@ footer>h2 {
     }
 }
 
-
 .presentation-container-2 {
     height: 9rem;
     width: 5rem;
@@ -198,7 +190,6 @@ footer>h2 {
     filter: invert(1);
 }
 
-
 .presentation-title {
     font-family: 'spartan_mblight';
     font-size: 1.1em;
@@ -211,13 +202,11 @@ footer>h2 {
     }
 }
 
-
 @media only screen and (min-width:800px) {
     .presentation-title {
         font-size: 1.5em;
     }
 }
-
 
 @media only screen and (min-height:480px) {
     .presentation-title {
@@ -225,35 +214,33 @@ footer>h2 {
     }
 }
 
-
 @media only screen and (min-height:800px) {
     .presentation-title {
-        font-size: 1.7em;
+        font-size: 1.8em;
         margin-block-start: 0.5em;
         margin-block-end: 0.5em;
     }
 }
 
 .presentation-img {
-    width: 100%;    
+    width: 100%;
     z-index: 900;
     aspect-ratio: 1/1;
 }
-
 
 .principal {
     min-height: calc(100vh - 1.5rem);
     background: rgb(2, 0, 36);
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 33%, rgba(5, 93, 176, 1) 66%, rgba(0, 212, 255, 1) 100%);
-    /* background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
-    background: linear-gradient(to right, #2c3e50, #bdc3c7); */
 }
 
-@media only screen and (min-width: 600px) {
+
+@media only screen and (min-height:576px) and (min-width:800px) {
     .principal {
         height: calc(100vh - 1.5rem);
     }
 }
+
 
 nav {
     height: min-content;
@@ -291,15 +278,29 @@ h3 {
     color: #fff;
     font-size: .5em;
     font-family: 'Blockletter';
-    margin-inline-end: .5rem;
+    margin-inline-end: .25rem;
+    margin-inline-start: .25rem;
+    text-align: center;
 }
 
-@media only screen and (min-width:600px) {
+@media only screen and (min-height:576px) {
     .menu {
-        font-size: .725em;
-        margin-inline-end: 1rem;
+        font-size: .6em;
     }
 }
+
+@media only screen and (min-height:576px) and (min-width:400px) {
+    .menu {
+        font-size: .725em;
+    }
+}
+
+@media only screen and (min-height:576px) and (min-width:800px) {
+    .menu {
+        font-size: 1em;
+    }
+}
+
 
 .menu:hover {
     color: #B6C2D9;
@@ -315,7 +316,6 @@ h3 {
         margin-inline-end: .5rem;
     }
 }
-
 
 .cart:hover {
     background-color: #B6C2D9;
@@ -333,16 +333,14 @@ h3 {
     height: 0.8rem;
     background-color: #fff;
     border-radius: 0.2rem;
-    z-index: 1000;
+
 }
 
 .cart-amount {
     color: #e3e4e5;
     font-family: 'Blockletter';
-    z-index: 1001;
+    margin: 0;
 }
-
-
 
 .swiper-slide {
     display: flex !important;
@@ -362,15 +360,12 @@ h3 {
     }
 }
 
-
-
 @media only screen and (min-height:576px) {
     .swiper-slide {
         flex-direction: column;
         justify-content: space-evenly;
     }
 }
-
 
 @media only screen and (min-height:576px) and (min-width:600px) {
     .swiper-slide {
@@ -386,8 +381,6 @@ h3 {
     align-items: center;
     padding: .125rem 0;
 }
-
-
 
 @media only screen and (min-width:400px) {
     .img-container {
@@ -413,6 +406,13 @@ h3 {
     }
 }
 
+@media only screen and (min-height:480px) and (min-width:600px) {
+    .img-container {
+        padding-right: 0;
+    }
+}
+
+
 @media only screen and (min-height:576px) {
     .img-container {
         width: 100%;
@@ -420,37 +420,39 @@ h3 {
     }
 }
 
+
 @media only screen and (min-height:576px) and (min-width:600px) {
     .img-container {
         height: 100%;
+        padding-right: 0;
     }
 }
 
 .homeimage {
-    height: 50vh;
-    max-height: 15rem;
-}
-
-@media only screen and (min-width:400px) {
-    .homeimage {
-        height: 98%;
-        width: auto;
-    }
+    max-height: 19rem;
+    aspect-ratio: 2/3;
 }
 
 @media only screen and (min-height:390px) {
     .homeimage {
-        max-height: 18rem;
+        max-height: 21rem;
+        aspect-ratio: 2/3;
     }
 }
 
-
 @media only screen and (min-height:480px) {
     .homeimage {
-        width: 90%;
-        height: auto;
-        max-width: 16rem;
-        max-height: 25rem;
+        max-height: 28rem;
+        aspect-ratio: 2/3;
+
+    }
+}
+
+@media only screen and (min-height:576px) {
+    .homeimage {
+        max-width: 21rem;
+        max-height: none;
+        aspect-ratio: 2/3;
     }
 }
 
@@ -480,13 +482,11 @@ h3 {
     }
 }
 
-
 @media only screen and (min-width:600px) and (min-height:480px) {
     .side {
         align-items: flex-start;
     }
 }
-
 
 @media only screen and (min-height:576px) {
     .side {
@@ -502,11 +502,12 @@ h3 {
 
 @media only screen and (min-height:576px) and (min-width:600px) {
     .side {
-        height: 100%;
-        justify-content: space-around;
+        width: calc(100% - 1rem);
+        height: 100vh;
+        justify-content: center;
+        align-items: flex-start;
     }
 }
-
 
 .description-container {
     padding: .25rem .75rem;
@@ -520,7 +521,6 @@ h3 {
     }
 }
 
-
 @media only screen and (min-width:400px) {
     .description-container {
         text-align: left;
@@ -533,33 +533,38 @@ h3 {
     }
 }
 
-
 @media only screen and (min-width:600px) and (min-height:480px) {
     .description-container {
         text-align: start;
     }
 }
 
-
-
 @media only screen and (min-height:576px) {
     .description-container {
         text-align: center;
         margin-bottom: 1rem;
+        padding: .5rem 1.25rem;
     }
 }
 
+@media only screen and (min-height:576px) and (min-width:600px) {
+    .description-container {
+        margin-bottom: 0;
+    }
+}
 
 .title {
     font-size: 1em;
     font-family: 'spartan_mblight';
     color: #fff;
     margin-bottom: .5rem;
+    text-align: center;
 }
 
 @media only screen and (min-width:400px) {
     .title {
         font-size: 1.25em;
+        text-align: left;
     }
 }
 
@@ -575,6 +580,18 @@ h3 {
     }
 }
 
+@media only screen and (min-height:480px)and (min-width:400px) {
+    .title {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-height:480px)and (min-width:600px) {
+    .title {
+        text-align: left;
+    }
+}
+
 @media only screen and (min-height:480px)and (min-width:900px) {
     .title {
         font-size: 1.7em;
@@ -586,23 +603,40 @@ h3 {
     font-family: 'spartan_mblight';
     color: #ffbf00;
     margin-bottom: .5rem;
+    text-align: center;
 }
-
 
 @media only screen and (min-width:400px) {
     .subtitle {
         font-size: .725em;
+        text-align: left;
     }
 }
-
-
-
 
 @media only screen and (min-height:390px) {
     .subtitle {
         font-size: .8em;
     }
 }
+
+@media only screen and (min-height:480px)and (min-width:400px) {
+    .subtitle {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-height:480px)and (min-width:600px) {
+    .subtitle {
+        text-align: left;
+    }
+}
+
+@media only screen and (min-height:576px)and (min-width:800px) {
+    .subtitle {
+        font-size: 1em;
+    }
+}
+
 
 .score-subtitle {
     display: flex;
@@ -632,8 +666,7 @@ h3 {
 
 @media only screen and (min-width:400px) and (max-height:479px) {
     .overview {
-        margin-right: 25%;
-        max-width: 300px;
+        max-width: 500px;
     }
 }
 
@@ -645,7 +678,6 @@ h3 {
     }
 }
 
-
 @media only screen and (min-width:850px) {
     .overview {
         font-size: .625em;
@@ -655,16 +687,15 @@ h3 {
 @media only screen and (min-height:480px)and (min-width:400px) {
     .overview {
         text-align: justify;
-        font-size: .7em;
+        font-size: .75em;
         margin: 1rem 0;
     }
 }
 
 @media only screen and (min-height:480px)and (min-width:600px) {
     .overview {
-        font-size: .7em;
-        margin: 0 25% 0 0;
-        max-width: 300px;
+        font-size: .75em;
+        max-width: 500px;
         text-align: start;
     }
 }
@@ -675,17 +706,16 @@ h3 {
     }
 }
 
-@media only screen and (min-height:576px) and (min-width:400px) {
+@media only screen and (min-height:576px) {
     .overview {
-        font-size: .7em;
-        margin: 0 20%;
-        max-width: none;
+        text-align: justify;
+        font-size: .85em;
     }
 }
 
 @media only screen and (min-height:576px) and (min-width:600px) {
     .overview {
-        font-size: .8em;
+        font-size: .75em;
 
     }
 }
@@ -696,22 +726,27 @@ h3 {
     }
 }
 
-
 .side-down {
+    width: calc(100% - 1.5rem);
     height: min-content;
-    background: rgb(2, 0, 36);
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 81, 146, 1) 35%, rgba(0, 215, 255, 1) 100%);
-    padding: 0.25rem;
+    margin: .25rem .75rem;
     border-radius: 0.2rem;
     max-width: 15rem;
+    padding: .25rem;
 }
 
-@media only screen and (min-width:800px) {
+@media only screen and (min-height:576px) and (min-width:400px) {
     .side-down {
-        max-width: 25rem;
+        max-width: 20rem;
     }
 }
 
+@media only screen and (min-height:800px) {
+    .side-down {
+        max-width: 20rem;
+    }
+}
 
 
 .opinion-menu {
@@ -727,7 +762,6 @@ h3 {
     background-color: #b9bdcc;
     margin-inline-start: 0.25rem;
 }
-
 
 .side-down-title {
     font-size: .5em;
@@ -749,9 +783,9 @@ h3 {
     }
 }
 
-@media only screen and (min-height:576px)and (min-width:500px) {
+@media only screen and (min-height:576px)and (min-width:300px) {
     .side-down-title {
-        font-size: .8em;
+        font-size: 1em;
     }
 }
 
@@ -775,18 +809,24 @@ h3 {
     }
 }
 
-@media only screen and (min-height:576px)and (min-width:500px) {
+@media only screen and (min-height:576px)and (min-width:300px) {
     .side-down-subtitle {
-        font-size: .5em;
+        font-size: .8em;
     }
 }
-
 
 .purchate {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+}
+
+@media only screen and (min-height:576px) {
+    .purchate {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .purchate-ul {
@@ -850,8 +890,6 @@ input[type="radio"][id^="cb"] {
     }
 }
 
-
-
 .quality:hover {
     background-color: #fff;
 }
@@ -889,6 +927,12 @@ input[type="radio"][id^="cb"] {
     }
 }
 
+@media only screen and (min-height:576px) {
+    .to-cart>h3 {
+        font-size: .625em;
+        margin-inline-end: .25rem;
+    }
+}
 
 .purchate-button {
     margin-inline-start: 2px;
@@ -913,14 +957,17 @@ input[type="radio"][id^="cb"] {
     }
 }
 
-
-
 @media only screen and (min-height:480px)and (min-width:900px) {
     .purchate-button {
         font-size: .8em;
     }
 }
 
+@media only screen and (min-height:576px) {
+    .purchate-button {
+        font-size: .625em;
+    }
+}
 
 .cart-main {
     min-height: calc(100vh - 3rem);
@@ -1050,7 +1097,6 @@ input[type="radio"][id^="cb"] {
 
 }
 
-
 .alert-container {
     display: none;
 }
@@ -1107,7 +1153,6 @@ input[type="radio"][id^="cb"] {
     }
 }
 
-
 @keyframes alert-message-2 {
     0% {
         transform: scale(0);
@@ -1141,8 +1186,6 @@ input[type="radio"][id^="cb"] {
     font-family: 'spartan_mblight';
     font-size: 2rem;
 }
-
-
 
 .alert-container-3 {
     display: none;
