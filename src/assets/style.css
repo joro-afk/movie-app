@@ -81,7 +81,9 @@ footer>h2 {
 .presentation {
     position: relative;
     height: calc(100vh - 1rem);
-    background-color: #333333;
+    /* background-color: #333333; */
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 33%, rgba(5, 93, 176, 1) 66%, rgba(0, 212, 255, 1) 100%);
 }
 
 
@@ -218,8 +220,10 @@ footer>h2 {
 
 .principal {
     min-height: calc(100vh - 1.5rem);
-    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
-    background: linear-gradient(to right, #2c3e50, #bdc3c7);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 33%, rgba(5, 93, 176, 1) 66%, rgba(0, 212, 255, 1) 100%);
+    /* background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
+    background: linear-gradient(to right, #2c3e50, #bdc3c7); */
 }
 
 @media only screen and (min-width: 600px) {
