@@ -83,7 +83,7 @@ footer>h2 {
     height: calc(100vh - 1rem);
     /* background-color: #333333; */
     background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 33%, rgba(5, 93, 176, 1) 66%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 30%, rgba(5, 93, 176, 1) 65%, rgba(0, 212, 255, 1) 100%);
 }
 
 
@@ -235,9 +235,9 @@ footer>h2 {
 }
 
 .presentation-img {
-    width: 100%;
-
+    width: 100%;    
     z-index: 900;
+    aspect-ratio: 1/1;
 }
 
 
