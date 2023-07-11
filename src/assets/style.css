@@ -269,6 +269,13 @@ h3 {
     margin: 0;
 }
 
+@media only screen and (min-height:690px) {
+    .menu-container {
+        font-size: 2em;
+    }
+}
+
+
 .menu-container>a {
     display: flex;
     justify-content: center;
@@ -289,23 +296,22 @@ h3 {
     text-align: center;
 }
 
-@media only screen and (min-height:576px) {
-    .menu {
-        font-size: .6em;
-    }
-}
-
 @media only screen and (min-height:576px) and (min-width:400px) {
     .menu {
-        font-size: .725em;
+        font-size: .7em;
     }
 }
 
 @media only screen and (min-height:576px) and (min-width:800px) {
     .menu {
-        font-size: 1em;
+        font-size: .8em;
     }
 }
+
+@media only screen and (min-height:690px) {
+    .menu {}
+}
+
 
 
 .menu:hover {
