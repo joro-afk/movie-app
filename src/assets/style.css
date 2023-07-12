@@ -321,8 +321,11 @@ h3 {
 }
 
 @media only screen and (min-height:690px) {
-    .menu {}
+    .menu {
+        font-size: .5em;
+    }
 }
+
 
 
 
@@ -366,6 +369,28 @@ h3 {
     margin: 0;
 }
 
+
+
+@media only screen and (min-width:400px) {
+    .swiper-wrapper {
+        display: flex !important;
+        align-items: center;
+        min-height: calc(100vh - 3rem);
+    }
+}
+
+@media only screen and (min-width:400px) and (min-height:480px) {
+    .swiper-wrapper {
+        align-items: start;
+    }
+}
+
+@media only screen and (min-width:600px) and (min-height:480px) {
+    .swiper-wrapper {
+        align-items: center;
+    }
+}
+
 @media only screen and (min-height:640px) and (min-width:600px) {
     .swiper {
         height: calc(100vh - 1.5rem);
@@ -380,16 +405,21 @@ h3 {
 }
 
 
-@media only screen and (min-width:600px) {
+@media only screen and (min-width:400px) {
     .swiper-slide {
-        height: calc(100vh - 3rem) !important;
+        height: calc(100vh - 3rem);
     }
 }
-
 
 @media only screen and (min-width:400px) and (max-height:479px) {
     .swiper-slide {
         flex-direction: row;
+    }
+}
+
+@media only screen and (min-width:400px) and (min-height:480px) {
+    .swiper-slide {
+        height: auto;
     }
 }
 
@@ -410,6 +440,12 @@ h3 {
 @media only screen and (min-height:576px) and (min-width:600px) {
     .swiper-slide {
         flex-direction: row;
+    }
+}
+
+@media only screen and (min-height:640px) and (min-width:600px) {
+    .swiper-slide {
+        align-items: stretch;
     }
 }
 
@@ -475,7 +511,7 @@ h3 {
 
 @media only screen and (min-height:390px) {
     .homeimage {
-        max-height: 19rem;
+        max-height: 21rem;
         aspect-ratio: 2/3;
     }
 }
@@ -490,11 +526,44 @@ h3 {
 
 @media only screen and (min-height:576px) {
     .homeimage {
-        max-width: 21rem;
+        max-height: 32rem;
+        aspect-ratio: 2/3;
+    }
+}
+
+
+
+@media only screen and (min-height:640px) {
+    .homeimage {
+        max-width: none;
         max-height: none;
         aspect-ratio: 2/3;
     }
 }
+
+@media only screen and (min-height:640px) and (min-width:600px) {
+    .homeimage {
+        max-height: 34rem;
+    }
+}
+
+
+@media only screen and (min-height:690px) {
+    .homeimage {
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 2/3;
+        max-height: 32rem;
+    }
+}
+
+@media only screen and (min-height:690px) and (min-width:800px) {
+    .homeimage {
+        max-height: 39rem;
+    }
+}
+
+
 
 .side {
     position: relative;
