@@ -62,13 +62,13 @@ footer>h2 {
     color: #fff;
     font-family: 'spartan_mblight';
     margin: 0;
-    font-size: .5em;
+    font-size: .6em;
     vertical-align: middle;
 }
 
 @media only screen and (min-width:400px) {
     footer>h2 {
-        font-size: .6em;
+        font-size: .7em;
     }
 }
 
@@ -275,6 +275,13 @@ h3 {
 }
 
 
+@media only screen and (min-height:720px) {
+    .menu-container {
+        height: 2.5rem;
+    }
+}
+
+
 .menu-container>a {
     display: flex;
     justify-content: center;
@@ -305,8 +312,6 @@ h3 {
     }
 }
 
-
-
 @media only screen and (min-height:576px) and (min-width:400px) {
     .menu {
         font-size: .75em;
@@ -324,6 +329,26 @@ h3 {
         font-size: .5em;
     }
 }
+
+@media only screen and (min-height:720px) {
+    .menu {
+        font-size: .4em;
+    }
+}
+
+@media only screen and (min-height:720px) and (min-width:300px) {
+    .menu {
+        font-size: .5em;
+    }
+}
+
+
+@media only screen and (min-height:720px) and (min-width:800px) {
+    .menu {
+        font-size: .7em;
+    }
+}
+
 
 
 
@@ -359,7 +384,13 @@ h3 {
     height: 0.8rem;
     background-color: #fff;
     border-radius: 0.2rem;
+}
 
+
+@media only screen and (min-height:690px) {
+    .home-img {
+        height: 1em;
+    }
 }
 
 .cart-amount {
@@ -714,9 +745,10 @@ h3 {
     }
 }
 
-@media only screen and (min-height:768px)and (min-width:600px) {
+@media only screen and (min-height:720px)and (min-width:600px) {
     .title {
         font-size: 2.25em;
+        margin-bottom: 1rem;
     }
 }
 
@@ -766,6 +798,14 @@ h3 {
         font-size: 1.2em;
     }
 }
+
+
+@media only screen and (min-height:720px) {
+    .subtitle {
+        font-size: 1.1em;
+    }
+}
+
 
 
 .score-subtitle {
@@ -923,6 +963,12 @@ h3 {
     }
 }
 
+@media only screen and (min-height:720px) {
+    .side-down-title {
+        font-size: 1em;
+    }
+}
+
 .side-down-subtitle {
     font-size: .5em;
     color: #fff;
@@ -939,7 +985,6 @@ h3 {
 @media only screen and (min-height:480px)and (min-width:500px) {
     .side-down-subtitle {
         font-size: .8em;
-
     }
 }
 
@@ -948,6 +993,13 @@ h3 {
         font-size: .8em;
     }
 }
+
+@media only screen and (min-height:720px) {
+    .side-down-subtitle {
+        font-size: .9em;
+    }
+}
+
 
 .purchate {
     display: flex;
@@ -995,19 +1047,18 @@ input[type="radio"][id^="cb"] {
     margin-inline-end: .5rem;
 }
 
-@media only screen and (min-height:720px) {
-    .quality {
-        height: 2rem;
-        width: 2rem;
-    }
-}
-
-
 @media only screen and (min-height:480px)and (min-width:900px) {
     .quality {
         height: 2rem;
         width: 2rem;
 
+    }
+}
+
+@media only screen and (min-height:720px) {
+    .quality {
+        height: 2rem;
+        width: 2rem;
     }
 }
 
@@ -1055,12 +1106,27 @@ input[type="radio"][id^="cb"] {
     }
 }
 
-@media only screen and (min-height:600px) and (min-height:640px) {
+@media only screen and (min-height:640px) and (min-width:600px) {
     .to-cart>h3 {
         font-size: .8em;
-
     }
 }
+
+
+@media only screen and (min-height:720px) {
+    .to-cart>h3 {
+        font-size: .85em;
+    }
+}
+
+@media only screen and (min-height:720px) and (min-width:800px) {
+    .to-cart>h3 {
+        font-size: 1em;
+    }
+}
+
+
+
 
 
 .purchate-button {
@@ -1104,6 +1170,14 @@ input[type="radio"][id^="cb"] {
 
     }
 }
+
+
+@media only screen and (min-height:720px) {
+    .purchate-button {
+        font-size: .825em;
+    }
+}
+
 
 
 .cart-main {
