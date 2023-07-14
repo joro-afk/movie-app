@@ -155,7 +155,7 @@ footer>h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0.125rem;
+    padding: 0.25rem;
     margin: 0;
     border: solid 0.25rem #000;
     -webkit-animation: presentation-container-2 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -223,7 +223,7 @@ footer>h2 {
 }
 
 .presentation-img {
-    width: 100%;
+    width: calc(100% - .5rem);
     z-index: 900;
     aspect-ratio: 1/1;
 }
