@@ -522,6 +522,7 @@ h3 {
 
 .homeimage {
     height: calc(100vh - 3rem);
+    max-height: 18.625rem;
     aspect-ratio: 2/3;
 }
 

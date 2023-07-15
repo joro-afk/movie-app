@@ -14,6 +14,8 @@
         <router-link to="/cart">
           <li class="menu cart">
             <img src="@/assets/images/cart.png" class="home-img" alt="" />
+          </li>
+          <li class="menu">
             <p class="cart-amount">{{ tvshows.items.length }}</p>
           </li>
         </router-link>
@@ -32,10 +34,12 @@
       class="mySwiper"
     >
       <swiper-slide v-for="swiper in tvshows.tvshows" :key="swiper">
-        <img
-          class="homeimage"
-          :src="`http://image.tmdb.org/t/p/w500/${swiper.poster_path}`"
-        />
+        <div class="img-container">
+          <img
+            class="homeimage"
+            :src="`http://image.tmdb.org/t/p/w500/${swiper.poster_path}`"
+          />
+        </div>
         <div class="side">
           <div class="description-container">
             <div class="title">{{ swiper.name }}</div>
@@ -96,7 +100,10 @@
                       id="cb3"
                     />
                     <label for="cb3">
-                      <img src="@/assets/images/1080.png" class="quality" alt=""
+                      <img
+                        src="@/assets/images/1080.png"
+                        class="quality"
+                        alt=""
                     /></label>
                   </li>
                   <li class="purchate-li">
