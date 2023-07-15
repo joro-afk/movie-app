@@ -75,9 +75,8 @@ footer>h2 {
 .presentation {
     position: relative;
     height: calc(100vh - 1rem);
-    /* background-color: #333333; */
     background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 30%, rgba(5, 93, 176, 1) 65%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(45deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 33%, rgba(5, 93, 176, 1) 66%, rgba(0, 212, 255, 1) 100%);
 }
 
 
@@ -230,7 +229,7 @@ footer>h2 {
 .principal {
     min-height: calc(100vh - 1.5rem);
     background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 33%, rgba(5, 93, 176, 1) 66%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(45deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 33%, rgba(5, 93, 176, 1) 66%, rgba(0, 212, 255, 1) 100%);
 }
 
 
@@ -611,7 +610,6 @@ h3 {
     }
 }
 
-
 .side {
     position: relative;
     padding: 0.125rem 0.125rem;
@@ -619,7 +617,7 @@ h3 {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-
+    margin-top: .5rem;
 }
 
 @media only screen and (min-width:400px) {
@@ -711,7 +709,6 @@ h3 {
     }
 }
 
-
 @media only screen and (min-height:786px) and (min-width:600px) {
     .description-container {
         margin-bottom: 2rem;
@@ -719,7 +716,7 @@ h3 {
 }
 
 .title {
-    font-size: 1em;
+    font-size: 1.1em;
     font-family: 'spartan_mblight';
     color: #fff;
     margin-bottom: .5rem;
@@ -782,10 +779,8 @@ h3 {
     }
 }
 
-
-
 .subtitle {
-    font-size: 0.5em;
+    font-size: 0.7em;
     font-family: 'spartan_mblight';
     color: #ffbf00;
     margin-bottom: .5rem;
@@ -842,22 +837,41 @@ h3 {
     }
 }
 
-
-
 .score-subtitle {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     margin-bottom: .5rem;
 }
 
+
+@media only screen and (min-width:400px) {
+    .score-subtitle {
+        justify-content: start;
+    }
+}
+
+@media only screen and (min-height:480px)and (min-width:400px) {
+    .score-subtitle {
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-height:480px)and (min-width:600px) {
+    .score-subtitle {
+        justify-content: start;
+    }
+}
+
+
 .score {
-    font-size: .5em;
+    font-size: .6em;
     font-family: 'spartan_mblight';
     color: #fff;
 }
 
 .air {
-    font-size: .25em;
+    font-size: .6em;
     font-family: 'spartan_mblight';
     color: #bab8b5;
     margin-inline-start: 1rem;
@@ -932,16 +946,15 @@ h3 {
     }
 }
 
-
-
-
-
 .side-down {
     width: calc(100% - 1.5rem);
     height: min-content;
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 81, 146, 1) 35%, rgba(0, 215, 255, 1) 100%);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(45deg, rgba(2, 0, 36, 1) 0%, rgba(0, 81, 146, 1) 33%, rgba(0, 148, 201, 1) 66%, rgba(0, 212, 255, 1) 100%);
     margin: .25rem .5rem;
     border-radius: 0.2rem;
+    border-bottom: solid 2px black;
+    border-left: solid 2px black;
     max-width: 15rem;
     padding: .25rem;
     text-align: center;
@@ -965,8 +978,6 @@ h3 {
     }
 }
 
-
-
 .opinion-menu {
     height: 2rem;
     margin-bottom: 0.5rem;
@@ -982,7 +993,7 @@ h3 {
 }
 
 .side-down-title {
-    font-size: .5em;
+    font-size: .6em;
     color: #fff;
     font-family: 'Cocogoose Pro Ultralight-trial';
     margin-top: 0;
@@ -1205,19 +1216,14 @@ input[type="radio"][id^="cb"] {
     }
 }
 
-
-
-
-
 .purchate-button {
-    margin-inline-start: 2px;
-    font-size: .25em;
+    margin-inline-start: 0.25rem;
+    font-size: .4em;
     border: 0;
     font-family: 'Cocogoose Pro Ultralight-trial';
     border-radius: 0.2rem;
     padding: 2px;
 }
-
 
 @media only screen and (min-height:480px) {
     .purchate-button {
