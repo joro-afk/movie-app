@@ -10,12 +10,12 @@
         <div class="views">
           <li>
             <router-link to="/films">
-              <h1 class="cart-returns">Films</h1>
+              <h1 class="menu">Films</h1>
             </router-link>
           </li>
           <li>
             <router-link to="/tvshows">
-              <h1 class="cart-returns">TV Shows</h1>
+              <h1 class="menu">TV Shows</h1>
             </router-link>
           </li>
         </div>

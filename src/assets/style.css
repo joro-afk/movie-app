@@ -72,6 +72,11 @@ footer>h2 {
     }
 }
 
+h1{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
 .presentation {
     position: relative;
     height: calc(100vh - 1rem);
@@ -119,16 +124,23 @@ footer>h2 {
 }
 
 .presentation-container>a {
-    height: 9.75rem;
-    width: 5.75rem;
+    height: 8.75rem;
+    width: 6rem;
     text-decoration: none;
+}
+
+@media only screen and (min-height:390px) {
+    .presentation-container>a {
+        height: 9.75rem;
+        width: 6rem;
+    }
 }
 
 @media only screen and (min-width:400px) {
     .presentation-container>a {
         margin-inline: 5%;
         height: 11rem;
-        width: 7rem;
+        width: 7.25rem;
     }
 }
 
@@ -136,7 +148,7 @@ footer>h2 {
     .presentation-container>a {
         margin-inline: 5%;
         height: 14rem;
-        width: 10rem;
+        width: 11rem;
     }
 }
 
@@ -148,7 +160,7 @@ footer>h2 {
 }
 
 .presentation-container-2 {
-    height: 9rem;
+    height: 8rem;
     width: 5rem;
     display: flex;
     flex-direction: column;
@@ -160,6 +172,13 @@ footer>h2 {
     -webkit-animation: presentation-container-2 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: presentation-container-2 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     color: #000;
+}
+
+@media only screen and (min-height:390px) {
+    .presentation-container-2 {
+        height: 9rem;
+        width: 5rem;
+    }
 }
 
 @media only screen and (min-width:400px) {
@@ -882,7 +901,7 @@ h3 {
     font-family: 'Quattrocento Sans Regular';
     color: #fff;
     margin-bottom: .25rem;
-    max-width: 500px;
+    max-width: 400px;
 }
 
 @media only screen and (min-width:850px) {
@@ -1264,14 +1283,12 @@ input[type="radio"][id^="cb"] {
     }
 }
 
-
-
 .cart-main {
     min-height: calc(100vh - 3rem);
 }
 
 .views {
-    display: flex;
+    display: flex;  
     flex-direction: row;
     width: 20rem;
 }
@@ -1286,20 +1303,6 @@ input[type="radio"][id^="cb"] {
     text-decoration: none;
 }
 
-.cart-returns {
-    margin: 0;
-    padding: 0.5rem;
-    margin-inline-start: 1rem;
-    text-decoration: none;
-    color: #fff;
-    font-family: 'Blockletter';
-    font-weight: 500;
-}
-
-.cart-returns:hover {
-    color: #B6C2D9;
-}
-
 .li-cart {
     display: flex;
     flex-direction: row;
@@ -1308,11 +1311,12 @@ input[type="radio"][id^="cb"] {
     margin: 0.2rem 1.5rem;
     border-radius: 0.2rem;
     background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 81, 146, 1) 35%, rgb(0, 217, 255) 100%);
+    background: linear-gradient(45deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 33%, rgba(5, 93, 176, 1) 66%, rgba(0, 212, 255, 1) 100%);
 }
 
 .cart-divs {
     width: calc(100% / 6);
+    height: 100%;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -1363,7 +1367,7 @@ input[type="radio"][id^="cb"] {
 .total {
     position: sticky;
     background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 81, 146, 1) 35%, rgba(0, 215, 255, 1) 100%);
+    background: linear-gradient(45deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 33%, rgba(5, 93, 176, 1) 66%, rgba(0, 212, 255, 1) 100%);
     height: 3rem;
     padding: 0 1.5rem;
     display: flex;
