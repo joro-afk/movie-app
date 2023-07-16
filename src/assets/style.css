@@ -515,8 +515,7 @@ h3 {
     }
 }
 
-
-@media only screen and (min-height:576px) {
+@media only screen and (min-height:576px) and (max-width:576px) {
     .img-container {
         width: 100%;
         height: calc(50% - 2px);
@@ -536,7 +535,6 @@ h3 {
     }
 }
 
-
 @media only screen and (min-width:600px) {
     .img-container {
         width: calc(50% - 2rem);
@@ -544,7 +542,6 @@ h3 {
         justify-content: flex-end;
     }
 }
-
 
 .homeimage {
     height: calc(100vh - 3rem);
@@ -574,8 +571,6 @@ h3 {
     }
 }
 
-
-
 @media only screen and (min-height:640px) {
     .homeimage {
         max-width: none;
@@ -589,7 +584,6 @@ h3 {
         max-height: 34rem;
     }
 }
-
 
 @media only screen and (min-height:690px) {
     .homeimage {
