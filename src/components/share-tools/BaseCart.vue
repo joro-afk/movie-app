@@ -23,14 +23,14 @@
     </nav>
     <div class="cart-list">
       <li class="li-cart" v-for="index in cart.items" :key="index">
-        <div class="cart-divs">
+        <div class="cart-divs" id="image-cart">
           <img
             class="cart-image"
             :src="`http://image.tmdb.org/t/p/w500/${index.poster_path}`"
           />
         </div>
         <div class="cart-divs" id="empty"></div>
-        <div class="cart-divs">
+        <div class="cart-divs" id="movie-title">
           <h2 class="cart-title">
             {{ index.original_title }} {{ index.name }}
           </h2>
@@ -49,11 +49,11 @@
           </select>
         </div>
 
-        <div class="cart-divs">
+        <div class="cart-divs" id="price">
           <h2 class="cart-price">{{ index.price }}</h2>
         </div>
 
-        <div class="cart-divs">
+        <div class="cart-divs" id="delete">
           <button @click="cart.deleteMovie(index)" class="cart-button">
             <h3>x</h3>
           </button>
@@ -61,7 +61,6 @@
       </li>
     </div>
     <div class="total">
-      <div class="total-containers"></div>
       <div class="total-containers"></div>
       <div class="total-containers"></div>
       <div class="total-containers">

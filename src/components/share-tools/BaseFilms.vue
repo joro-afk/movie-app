@@ -141,7 +141,9 @@
     <div class="alert-container-2">
       <div class="alert-back"></div>
       <div class="alert-message-2">
-        <button class="alert-button-2" @click="films.closeButton2()">X</button>
+        <button class="alert-button-2" @click="films.closeButton2()">
+          X
+        </button>
         <h1 class="message-2">You must choose quality first...</h1>
       </div>
     </div>

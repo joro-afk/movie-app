@@ -70,6 +70,7 @@ export const useFilmsStore = defineStore({
     },
 
     addToCart(swiper, picked) {
+      console.log(this.items);
       if (this.items.includes(swiper)) {
         const element = document.querySelector(".alert-container");
         element.style.display = "block";
@@ -100,11 +101,10 @@ export const useFilmsStore = defineStore({
     },
 
     timeout() {
-      setTimeout(timeout, 1000);
+      setTimeout(timeout, 500);
       function timeout() {
         const element = document.querySelector(".alert-container-3");
         element.style.display = "none";
-       
       }
     },
 

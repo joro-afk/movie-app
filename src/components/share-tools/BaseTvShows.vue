@@ -120,7 +120,7 @@
                   </li>
                 </ul>
                 <div class="to-cart">
-                  <h3>us$ 00 {{ picked }}</h3>
+                  <h3>us$ {{ picked }}</h3>
                   <button
                     class="purchate-button"
                     @click="tvshows.addToCart(swiper, picked)"
