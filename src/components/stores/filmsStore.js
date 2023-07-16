@@ -100,7 +100,7 @@ export const useFilmsStore = defineStore({
     },
 
     timeout() {
-      setTimeout(timeout, 2000);
+      setTimeout(timeout, 1000);
       function timeout() {
         const element = document.querySelector(".alert-container-3");
         element.style.display = "none";
