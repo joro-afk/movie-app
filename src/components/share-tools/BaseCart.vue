@@ -29,7 +29,6 @@
             :src="`http://image.tmdb.org/t/p/w500/${index.poster_path}`"
           />
         </div>
-        <div class="cart-divs" id="empty"></div>
         <div class="cart-divs" id="movie-title">
           <h2 class="cart-title">
             {{ index.original_title }} {{ index.name }}

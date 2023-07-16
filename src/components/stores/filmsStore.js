@@ -134,10 +134,6 @@ export const useFilmsStore = defineStore({
       let changed = index.price * -1;
       this.total.push(parseFloat(changed));
       this.totalsum();
-      index.price = event.target.value.price;
-      console.log(index.price);
-      index.quality = event.target.value.qty;
-      console.log(index.quality);
       this.total.push(parseFloat(index.price));
       this.totalsum();
     },
