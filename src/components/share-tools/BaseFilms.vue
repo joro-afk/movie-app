@@ -114,7 +114,7 @@
                 </ul>
 
                 <div class="to-cart">
-                  <h3>us$ {{ picked }}</h3>
+                  <h3>us${{ picked }}</h3>
 
                   <button
                     class="purchate-button"
@@ -141,9 +141,7 @@
     <div class="alert-container-2">
       <div class="alert-back"></div>
       <div class="alert-message-2">
-        <button class="alert-button-2" @click="films.closeButton2()">
-          X
-        </button>
+        <button class="alert-button-2" @click="films.closeButton2()">X</button>
         <h1 class="message-2">You must choose quality first...</h1>
       </div>
     </div>
@@ -181,7 +179,7 @@ export default {
       films,
       Virtual,
       modules: [Navigation, Pagination],
-      picked: 0,
+      picked: null,
     };
   },
 };
