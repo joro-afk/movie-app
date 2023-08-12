@@ -84,10 +84,10 @@ export const useFilmsStore = defineStore({
           picked == 15
             ? (qty = " 4K")
             : picked == 10
-            ? (qty = " 1080Q")
-            : picked == 7
-            ? (qty = " HQ")
-            : (qty = " 480P");
+              ? (qty = " 1080Q")
+              : picked == 7
+                ? (qty = " HQ")
+                : (qty = " 480P");
           const element = document.querySelector(".alert-container-3");
           element.style.display = "block";
           this.timeout();
@@ -122,6 +122,7 @@ export const useFilmsStore = defineStore({
       }
       console.log("No se encontro");
       return;
+
     },
 
     totalsum() {
@@ -130,12 +131,21 @@ export const useFilmsStore = defineStore({
       });
     },
 
-    onChange(event, index) {
-      let changed = index.price * -1;
+    onChange(index) {
+      let changed = index.price * -1
+      let newValue = event.target.value;
       this.total.push(parseFloat(changed));
       this.totalsum();
-      this.total.push(parseFloat(index.price));
+      this.total.push(parseFloat(newValue));
       this.totalsum();
+      index.price = newValue
+      index.price == 15
+        ? (index.quality = " 4K")
+        : index.price == 10
+          ? (index.quality = " 1080Q")
+          : index.price == 7
+            ? (index.quality = " HQ")
+            : (index.quality = " 480P");
     },
 
     closeButton() {

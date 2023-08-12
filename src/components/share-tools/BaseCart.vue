@@ -39,12 +39,12 @@
           <select
             name="quality"
             id="qty"
-            @change="cart.onChange($event, index)"
+            @change="cart.onChange(index, $event)"
           >
-            <option value='{"price":"7", "qty":"HQ"}'>480Q</option>
-            <option value='{"price":"7", "qty":"HQ"}'>HQ</option>
-            <option value='{"price":"7", "qty":"HQ"}'>1080</option>
-            <option value='{"price":"7", "qty":"HQ"}'>4K</option>
+            <option value="4">480Q</option>
+            <option value="7">HQ</option>
+            <option value="10">1080</option>
+            <option value="15">4K</option>
           </select>
         </div>
 
