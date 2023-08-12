@@ -1129,14 +1129,15 @@ h3 {
 
 .purchate-li {
     list-style: none;
-    margin-inline-end: 0;
+    margin-inline-end: 0.5rem;
 }
 
 input[type="radio"][id^="cb"] {
     display: none;
 }
 
-.quality {
+.quality,
+quality-active-selection {
     height: 1.5rem;
     width: 1.5rem;
     opacity: 1;
@@ -1146,21 +1147,27 @@ input[type="radio"][id^="cb"] {
 }
 
 @media only screen and (min-height:480px)and (min-width:900px) {
-    .quality {
+
+    .quality,
+    .quality-active-selection {
         height: 2rem;
         width: 2rem;
     }
 }
 
 @media only screen and (min-height:720px) {
-    .quality {
+
+    .quality,
+    .quality-active-selection {
         height: 2rem;
         width: 2rem;
     }
 }
 
 @media only screen and (min-height:800px) {
-    .quality {
+
+    .quality,
+    .quality-active-selection {
         height: 2.5rem;
         width: 2.5rem;
     }
@@ -1170,10 +1177,38 @@ input[type="radio"][id^="cb"] {
     background-color: #fff;
 }
 
-.quality::selection{
-    background-color: aqua;
+#button-1,
+#button-2,
+#button-3,
+#button-4 {
+    background-position: center;
+    background-size: contain;
+    filter: invert(0.1);
 }
 
+#button-1:hover,
+#button-2:hover,
+#button-3:hover,
+#button-4:hover {
+ background-color: #fff;
+}
+
+
+#button-1 {
+    background-image: url(../assets/images/480-pixels.png);
+}
+
+#button-2 {
+    background-image: url(../assets/images/high-quality.png);
+}
+
+#button-3 {
+    background-image: url(../assets/images/1080.png);
+}
+
+#button-4 {
+    background-image: url(../assets/images/4k.png);
+}
 
 .to-cart {
     display: flex !important;
@@ -1434,6 +1469,7 @@ input[type="radio"][id^="cb"] {
 }
 
 @media only screen and (min-width:300px) {
+
     #qty,
     .cart-quality,
     .cart-title,
@@ -1445,6 +1481,7 @@ input[type="radio"][id^="cb"] {
 }
 
 @media only screen and (min-width:400px) {
+
     #qty,
     .cart-quality,
     .cart-title,
@@ -1456,6 +1493,7 @@ input[type="radio"][id^="cb"] {
 }
 
 @media only screen and (min-width:600px) {
+
     #qty,
     .cart-quality,
     .cart-title,
@@ -1467,6 +1505,7 @@ input[type="radio"][id^="cb"] {
 }
 
 @media only screen and (min-width:800px) {
+
     #qty,
     .cart-quality,
     .cart-title,
@@ -1478,6 +1517,7 @@ input[type="radio"][id^="cb"] {
 }
 
 @media only screen and (min-width:1000px) {
+
     #qty,
     .cart-quality,
     .cart-title,
@@ -1489,6 +1529,7 @@ input[type="radio"][id^="cb"] {
 }
 
 @media only screen and (min-width:1200px) {
+
     #qty,
     .cart-quality,
     .cart-title,

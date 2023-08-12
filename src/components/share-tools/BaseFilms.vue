@@ -62,54 +62,65 @@
                       v-model="picked"
                       id="cb1"
                     />
-                    <label for="cb1"
-                      ><img
-                        src="@/assets/images/480-pixels.png"
-                        class="quality"
-                        alt=""
-                    /></label>
+                    <label for="cb1">
+                      <button
+                        class="quality-active-selection"
+                        id="button-1"
+                        :class="active ? 'active' : 'non-active'"
+                        @click="selectedQuality()"
+                      ></button
+                    ></label>
                   </li>
                   <li class="purchate-li">
-                    <input
-                      type="radio"
-                      name="q-options"
-                      value="7"
-                      v-model="picked"
-                      id="cb2"
-                    />
-                    <label for="cb2">
-                      <img
-                        src="@/assets/images/high-quality.png"
-                        class="quality"
-                        alt=""
-                    /></label>
+                    <button
+                      class="quality-active-selection"
+                      id="button-2"
+                      :class="active ? 'active' : 'non-active'"
+                      @click="selectedQuality()"
+                    >
+                      <input
+                        type="radio"
+                        name="q-options"
+                        value="7"
+                        v-model="picked"
+                        id="cb2"
+                      />
+                      <label for="cb2"> </label>
+                    </button>
                   </li>
                   <li class="purchate-li">
-                    <input
-                      type="radio"
-                      name="q-options"
-                      value="10"
-                      v-model="picked"
-                      id="cb3"
-                    />
-                    <label for="cb3">
-                      <img
-                        src="@/assets/images/1080.png"
-                        class="quality"
-                        alt=""
-                    /></label>
+                    <button
+                      class="quality-active-selection"
+                      id="button-3"
+                      :class="active ? 'active' : 'non-active'"
+                      @click="selectedQuality()"
+                    >
+                      <input
+                        type="radio"
+                        name="q-options"
+                        value="10"
+                        v-model="picked"
+                        id="cb3"
+                      />
+                      <label for="cb3"> </label>
+                    </button>
                   </li>
                   <li class="purchate-li">
-                    <input
-                      type="radio"
-                      name="q-options"
-                      value="15"
-                      v-model="picked"
-                      id="cb4"
-                    />
-                    <label for="cb4">
-                      <img src="@/assets/images/4k.png" class="quality" alt=""
-                    /></label>
+                    <button
+                      class="quality-active-selection"
+                      id="button-4"
+                      :class="active ? 'active' : 'non-active'"
+                      @click="selectedQuality()"
+                    >
+                      <input
+                        type="radio"
+                        name="q-options"
+                        value="15"
+                        v-model="picked"
+                        id="cb4"
+                      />
+                      <label for="cb4"> </label>
+                    </button>
                   </li>
                 </ul>
 
@@ -180,7 +191,19 @@ export default {
       Virtual,
       modules: [Navigation, Pagination],
       picked: null,
+      active: false,
     };
+  },
+
+  methods: {
+    selectedQuality() {
+      this.active = !this.active;
+    },
   },
 };
 </script>
+<style scoped>
+.active{
+  filter: invert(0);
+}
+</style>
