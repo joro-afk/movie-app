@@ -62,65 +62,37 @@
                       v-model="picked"
                       id="cb1"
                     />
-                    <label for="cb1">
-                      <button
-                        class="quality-active-selection"
-                        id="button-1"
-                        :class="active ? 'active' : 'non-active'"
-                        @click="selectedQuality()"
-                      ></button
-                    ></label>
+                    <label for="cb1"> option1 </label>
                   </li>
                   <li class="purchate-li">
-                    <button
-                      class="quality-active-selection"
-                      id="button-2"
-                      :class="active ? 'active' : 'non-active'"
-                      @click="selectedQuality()"
-                    >
-                      <input
-                        type="radio"
-                        name="q-options"
-                        value="7"
-                        v-model="picked"
-                        id="cb2"
-                      />
-                      <label for="cb2"> </label>
-                    </button>
+                    <input
+                      type="radio"
+                      name="q-options"
+                      value="7"
+                      v-model="picked"
+                      id="cb2"
+                    />
+                    <label for="cb2">option2</label>
                   </li>
                   <li class="purchate-li">
-                    <button
-                      class="quality-active-selection"
-                      id="button-3"
-                      :class="active ? 'active' : 'non-active'"
-                      @click="selectedQuality()"
-                    >
-                      <input
-                        type="radio"
-                        name="q-options"
-                        value="10"
-                        v-model="picked"
-                        id="cb3"
-                      />
-                      <label for="cb3"> </label>
-                    </button>
+                    <input
+                      type="radio"
+                      name="q-options"
+                      value="10"
+                      v-model="picked"
+                      id="cb3"
+                    />
+                    <label for="cb3"> </label>
                   </li>
                   <li class="purchate-li">
-                    <button
-                      class="quality-active-selection"
-                      id="button-4"
-                      :class="active ? 'active' : 'non-active'"
-                      @click="selectedQuality()"
-                    >
-                      <input
-                        type="radio"
-                        name="q-options"
-                        value="15"
-                        v-model="picked"
-                        id="cb4"
-                      />
-                      <label for="cb4"> </label>
-                    </button>
+                    <input
+                      type="radio"
+                      name="q-options"
+                      value="15"
+                      v-model="picked"
+                      id="cb4"
+                    />
+                    <label for="cb4"> </label>
                   </li>
                 </ul>
 
@@ -203,7 +175,7 @@ export default {
 };
 </script>
 <style scoped>
-.active{
+.active {
   filter: invert(0);
 }
 </style>

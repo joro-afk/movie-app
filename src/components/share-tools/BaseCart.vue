@@ -69,7 +69,7 @@
         <h3>{{ cart.sum }}</h3>
       </div>
 
-      <div class="total-containers"></div>
+      <div class="total-containers">  <button>Buy</button></div>
     </div>
   </div>
 </template>
