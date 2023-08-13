@@ -21,7 +21,6 @@
         </router-link>
       </ul>
     </nav>
-
     <swiper
       :slidesPerView="'auto'"
       :centeredSlides="true"
@@ -54,7 +53,6 @@
               {{ swiper.overview }}
             </div>
           </div>
-
           <div class="side-down">
             <h1 class="side-down-title">Watch Now</h1>
             <div>
@@ -68,6 +66,7 @@
                         src="@/assets/images/480-pixels.png"
                         class="quality"
                         alt=""
+                        v-on:click="chosenQty"
                     /></label>
                   </li>
                   <li class="purchate-li">
@@ -77,6 +76,7 @@
                         src="@/assets/images/high-quality.png"
                         class="quality"
                         alt=""
+                        v-on:click="chosenQty"
                     /></label>
                   </li>
                   <li class="purchate-li">
@@ -86,17 +86,22 @@
                         src="@/assets/images/1080.png"
                         class="quality"
                         alt=""
+                        v-on:click="chosenQty"
                     /></label>
                   </li>
                   <li class="purchate-li">
                     <input type="radio" id="cb4" value="15" v-model="picked" />
                     <label for="cb4"
-                      ><img src="@/assets/images/4k.png" class="quality" alt=""
+                      ><img
+                        src="@/assets/images/4k.png"
+                        class="quality"
+                        alt=""
+                        v-on:click="chosenQty"
                     /></label>
                   </li>
                 </ul>
                 <div class="to-cart">
-                  <h3>us$ {{ picked }}</h3>
+                  <h3>Quality {{ qtyChosen }} us${{ picked }}</h3>
                   <button
                     class="purchate-button"
                     @click="tvshows.addToCart(swiper, picked)"
@@ -110,7 +115,6 @@
         </div>
       </swiper-slide>
     </swiper>
-
     <div class="alert-container">
       <div class="alert-back"></div>
       <div class="alert-message">
@@ -129,7 +133,6 @@
         <h1 class="message-2">You must choose quality first...</h1>
       </div>
     </div>
-
     <div class="alert-container-3">
       <div class="alert-message-3">
         <h2 class="message-3">Added to your cart</h2>
@@ -152,6 +155,7 @@ export default {
   },
   setup() {
     const picked = ref("0");
+    const qtyChosen = ref("No defined");
     const tvshows = useFilmsStore();
     const onSwiper = (swiper) => {
       console.log(swiper);
@@ -159,7 +163,6 @@ export default {
     const onSlideChange = () => {
       console.log("slide change");
     };
-
     return {
       onSwiper,
       onSlideChange,
@@ -167,7 +170,19 @@ export default {
       Virtual,
       modules: [Navigation, Pagination],
       picked,
+      qtyChosen,
     };
+  },
+  watch: {
+    picked(newValue, oldValue) {
+      newValue != oldValue && this.picked == 15
+        ? (this.qtyChosen = " 4K")
+        : this.picked == 10
+        ? (this.qtyChosen = " 1080Q")
+        : this.picked == 7
+        ? (this.qtyChosen = " HQ")
+        : (this.qtyChosen = " 480P");
+    },
   },
 };
 </script>
