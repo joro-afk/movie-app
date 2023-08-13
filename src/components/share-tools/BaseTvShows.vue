@@ -62,13 +62,7 @@
               <div class="purchate">
                 <ul class="purchate-ul">
                   <li class="purchate-li">
-                    <input
-                      type="radio"
-                      name="q-options"
-                      value="4"
-                      v-model="picked"
-                      id="cb1"
-                    />
+                    <input type="radio" id="cb1" value="4" v-model="picked" />
                     <label for="cb1"
                       ><img
                         src="@/assets/images/480-pixels.png"
@@ -77,45 +71,27 @@
                     /></label>
                   </li>
                   <li class="purchate-li">
-                    <input
-                      type="radio"
-                      name="q-options"
-                      value="7"
-                      v-model="picked"
-                      id="cb2"
-                    />
-                    <label for="cb2">
-                      <img
+                    <input type="radio" id="cb2" value="7" v-model="picked" />
+                    <label for="cb2"
+                      ><img
                         src="@/assets/images/high-quality.png"
                         class="quality"
                         alt=""
                     /></label>
                   </li>
                   <li class="purchate-li">
-                    <input
-                      type="radio"
-                      name="q-options"
-                      value="10"
-                      v-model="picked"
-                      id="cb3"
-                    />
-                    <label for="cb3">
-                      <img
+                    <input type="radio" id="cb3" value="10" v-model="picked" />
+                    <label for="cb3"
+                      ><img
                         src="@/assets/images/1080.png"
                         class="quality"
                         alt=""
                     /></label>
                   </li>
                   <li class="purchate-li">
-                    <input
-                      type="radio"
-                      name="q-options"
-                      value="15"
-                      v-model="picked"
-                      id="cb4"
-                    />
-                    <label for="cb4">
-                      <img src="@/assets/images/4k.png" class="quality" alt=""
+                    <input type="radio" id="cb4" value="15" v-model="picked" />
+                    <label for="cb4"
+                      ><img src="@/assets/images/4k.png" class="quality" alt=""
                     /></label>
                   </li>
                 </ul>
@@ -162,6 +138,7 @@
   </div>
 </template>
 <script>
+import { ref } from "vue";
 import { Virtual, Navigation, Pagination } from "swiper";
 import { useFilmsStore } from "../stores/filmsStore";
 import { Swiper, SwiperSlide } from "swiper/vue";
@@ -174,6 +151,7 @@ export default {
     SwiperSlide,
   },
   setup() {
+    const picked = ref("0");
     const tvshows = useFilmsStore();
     const onSwiper = (swiper) => {
       console.log(swiper);
@@ -188,7 +166,7 @@ export default {
       tvshows,
       Virtual,
       modules: [Navigation, Pagination],
-      picked: null,
+      picked,
     };
   },
 };

@@ -44,61 +44,50 @@
             <div class="subtitle">
               Original title: {{ swiper.original_title }}
             </div>
-
             <div class="overview">{{ swiper.overview }}</div>
           </div>
-
           <div class="side-down">
             <h1 class="side-down-title">Watch Now</h1>
-            <div class="subtitle-container">
+            <div>
               <h1 class="side-down-subtitle">Quality options</h1>
               <div class="purchate">
                 <ul class="purchate-ul">
                   <li class="purchate-li">
-                    <input
-                      type="radio"
-                      name="q-options"
-                      value="4"
-                      v-model="picked"
-                      id="cb1"
-                    />
-                    <label for="cb1"> option1 </label>
+                    <input type="radio" id="cb1" value="4" v-model="picked" />
+                    <label for="cb1"
+                      ><img
+                        src="@/assets/images/480-pixels.png"
+                        class="quality"
+                        alt=""
+                    /></label>
                   </li>
                   <li class="purchate-li">
-                    <input
-                      type="radio"
-                      name="q-options"
-                      value="7"
-                      v-model="picked"
-                      id="cb2"
-                    />
-                    <label for="cb2">option2</label>
+                    <input type="radio" id="cb2" value="7" v-model="picked" />
+                    <label for="cb2"
+                      ><img
+                        src="@/assets/images/high-quality.png"
+                        class="quality"
+                        alt=""
+                    /></label>
                   </li>
                   <li class="purchate-li">
-                    <input
-                      type="radio"
-                      name="q-options"
-                      value="10"
-                      v-model="picked"
-                      id="cb3"
-                    />
-                    <label for="cb3"> </label>
+                    <input type="radio" id="cb3" value="10" v-model="picked" />
+                    <label for="cb3"
+                      ><img
+                        src="@/assets/images/1080.png"
+                        class="quality"
+                        alt=""
+                    /></label>
                   </li>
                   <li class="purchate-li">
-                    <input
-                      type="radio"
-                      name="q-options"
-                      value="15"
-                      v-model="picked"
-                      id="cb4"
-                    />
-                    <label for="cb4"> </label>
+                    <input type="radio" id="cb4" value="15" v-model="picked" />
+                    <label for="cb4"
+                      ><img src="@/assets/images/4k.png" class="quality" alt=""
+                    /></label>
                   </li>
                 </ul>
-
                 <div class="to-cart">
-                  <h3>us${{ picked }}</h3>
-
+                  <h3>us$ {{ picked }}</h3>
                   <button
                     class="purchate-button"
                     @click="films.addToCart(swiper, picked)"
@@ -137,6 +126,7 @@
   </div>
 </template>
 <script>
+import { ref } from "vue";
 import { Virtual, Navigation, Pagination } from "swiper";
 import { useFilmsStore } from "../stores/filmsStore";
 import { Swiper, SwiperSlide } from "swiper/vue";
@@ -150,6 +140,7 @@ export default {
   },
   setup() {
     const films = useFilmsStore();
+    const picked = ref("0");
     const onSwiper = (swiper) => {
       console.log(swiper);
     };
@@ -162,20 +153,8 @@ export default {
       films,
       Virtual,
       modules: [Navigation, Pagination],
-      picked: null,
-      active: false,
+      picked,
     };
-  },
-
-  methods: {
-    selectedQuality() {
-      this.active = !this.active;
-    },
   },
 };
 </script>
-<style scoped>
-.active {
-  filter: invert(0);
-}
-</style>

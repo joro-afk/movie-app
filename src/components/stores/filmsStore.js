@@ -76,7 +76,7 @@ export const useFilmsStore = defineStore({
         element.style.display = "block";
         return;
       } else {
-        if (picked === null) {
+        if (picked === null || picked === "0") {
           const element = document.querySelector(".alert-container-2");
           element.style.display = "block";
         } else {
