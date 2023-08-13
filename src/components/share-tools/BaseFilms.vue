@@ -59,6 +59,7 @@
                         src="@/assets/images/480-pixels.png"
                         class="quality"
                         alt=""
+                        v-on:click="chosenQty"
                     /></label>
                   </li>
                   <li class="purchate-li">
@@ -68,6 +69,7 @@
                         src="@/assets/images/high-quality.png"
                         class="quality"
                         alt=""
+                        v-on:click="chosenQty"
                     /></label>
                   </li>
                   <li class="purchate-li">
@@ -77,17 +79,22 @@
                         src="@/assets/images/1080.png"
                         class="quality"
                         alt=""
+                        v-on:click="chosenQty"
                     /></label>
                   </li>
                   <li class="purchate-li">
                     <input type="radio" id="cb4" value="15" v-model="picked" />
                     <label for="cb4"
-                      ><img src="@/assets/images/4k.png" class="quality" alt=""
+                      ><img
+                        src="@/assets/images/4k.png"
+                        class="quality"
+                        alt=""
+                        v-on:click="chosenQty"
                     /></label>
                   </li>
                 </ul>
                 <div class="to-cart">
-                  <h3>us$ {{ picked }}</h3>
+                  <h3>Quality {{ qtyChosen }} us${{ picked }}</h3>
                   <button
                     class="purchate-button"
                     @click="films.addToCart(swiper, picked)"
@@ -141,6 +148,7 @@ export default {
   setup() {
     const films = useFilmsStore();
     const picked = ref("0");
+    const qtyChosen = ref("No defined");
     const onSwiper = (swiper) => {
       console.log(swiper);
     };
@@ -154,7 +162,20 @@ export default {
       Virtual,
       modules: [Navigation, Pagination],
       picked,
+      qtyChosen,
     };
+  },
+
+  watch: {
+    picked(newValue, oldValue) {
+      newValue != oldValue && this.picked == 15
+        ? (this.qtyChosen = " 4K")
+        : this.picked == 10
+        ? (this.qtyChosen = " 1080Q")
+        : this.picked == 7
+        ? (this.qtyChosen = " HQ")
+        : (this.qtyChosen = " 480P");
+    },
   },
 };
 </script>
