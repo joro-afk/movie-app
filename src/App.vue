@@ -1,5 +1,6 @@
 <template>
   <div>
+    
     <BaseLayout />
   </div>
 </template>

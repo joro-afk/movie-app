@@ -1,6 +1,6 @@
 <template>
   <div class="principal">
-    <nav>
+   
       <ul class="menu-container">
         <router-link to="/">
           <li class="menu home">
@@ -20,7 +20,7 @@
           </li>
         </router-link>
       </ul>
-    </nav>
+
     <swiper
       :slidesPerView="'auto'"
       :centeredSlides="true"

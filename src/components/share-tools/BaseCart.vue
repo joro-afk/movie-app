@@ -1,6 +1,6 @@
 <template>
   <div class="cart-main">
-    <nav>
+
       <ul class="menu-container">
         <router-link to="/">
           <li class="menu home">
@@ -20,7 +20,6 @@
           </li>
         </div>
       </ul>
-    </nav>
     <div class="cart-list">
       <li class="li-cart" v-for="index in cart.items" :key="index">
         <div class="cart-divs" id="image-cart">

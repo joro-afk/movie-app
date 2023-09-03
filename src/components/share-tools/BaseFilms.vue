@@ -1,6 +1,6 @@
 <template>
   <div class="principal" lang="en">
-    <nav>
+  
       <ul class="menu-container">
         <router-link to="/">
           <li class="menu home">
@@ -18,7 +18,7 @@
           </li>
         </router-link>
       </ul>
-    </nav>
+ 
 
     <swiper
       :slidesPerView="'auto'"
@@ -111,17 +111,23 @@
     <div class="alert-container">
       <div class="alert-back"></div>
       <div class="alert-message">
+        <div class="alert-button-container">
         <button class="alert-button" @click="films.closeButton()">X</button>
-        <h1 class="message">
-          Upps! It seems like you already have this in your cart
-        </h1>
+      </div>
+      <div class="message-container">
+        <h1 class="message"> Upps! It seems like you already have this in your cart </h1>
+      </div>
       </div>
     </div>
     <div class="alert-container-2">
       <div class="alert-back"></div>
       <div class="alert-message-2">
+        <div class="alert-button-container">
         <button class="alert-button-2" @click="films.closeButton2()">X</button>
+      </div>
+      <div class="message-container">
         <h1 class="message-2">You must choose quality first...</h1>
+      </div>
       </div>
     </div>
 
