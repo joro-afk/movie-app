@@ -225,7 +225,7 @@ footer>h2 {
 
 .presentation-img {
     width: calc(100% - .5rem);
-    z-index: 900;
+    z-index: 900;   
 }
 
 .principal {
