@@ -135,7 +135,7 @@ footer>h2 {
     }
 }
 
-@media only screen and (min-height:480px) {
+@media only screen and (min-height:500px) {
     .presentation-container>a {
         height: 14rem;
         width: 10rem;
@@ -178,7 +178,7 @@ footer>h2 {
     }
 }
 
-@media only screen and (min-height:480px) {
+@media only screen and (min-height:500px) {
     .presentation-container-2 {
         height: 13rem;
         width: 9rem;
@@ -398,15 +398,18 @@ h3 {
 }
 
 .homeimage {
-    height: auto;
-    width: 100%;
+    /* height: auto;
+    width: 100%;*/
     aspect-ratio: 2/3;
-}
+    height: 80vh;
+    width: auto;
+}   
 
-@media only screen and (min-width:500px) {
+
+@media only screen and (min-width:1024px) {
     .homeimage {
-        height: 100%;
-        width: auto;
+       height: 100%;
+       width: auto;
     }
 }
 
