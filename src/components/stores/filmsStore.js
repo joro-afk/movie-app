@@ -72,13 +72,17 @@ export const useFilmsStore = defineStore({
     addToCart(swiper, picked) {
       console.log(this.items);
       if (this.items.includes(swiper)) {
-        const element = document.querySelector(".alert-container");
+        const element = document.querySelector(".alert-container"); 
+        const element2 = document.querySelector(".main-wrapper");
         element.style.display = "block";
+        element2.classList.add('newHeight');
         return;
       } else {
         if (picked === null || picked === "0") {
           const element = document.querySelector(".alert-container-2");
+          const element2 = document.querySelector(".main-wrapper");
           element.style.display = "block";
+          element2.classList.add('newHeight');
         } else {
           let qty = "";
           picked == 15
@@ -150,11 +154,15 @@ export const useFilmsStore = defineStore({
 
     closeButton() {
       const element = document.querySelector(".alert-container");
+      const element2 = document.querySelector(".main-wrapper");
+      element2.classList.remove('newHeight');
       element.style.display = "none";
     },
 
     closeButton2() {
       const element = document.querySelector(".alert-container-2");
+      const element2 = document.querySelector(".main-wrapper");
+      element2.classList.remove('newHeight');
       element.style.display = "none";
     },
   },

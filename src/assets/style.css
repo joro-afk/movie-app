@@ -44,6 +44,14 @@ h3 {
     margin: 0;
 }
 
+.main-wrapper{
+    height: auto ;
+}
+.newHeight {
+    height: 100vh;
+    overflow: hidden;
+}
+
 .main-footer {
     background-color: #000;
     width: 100%;
@@ -403,13 +411,13 @@ h3 {
     aspect-ratio: 2/3;
     height: 80vh;
     width: auto;
-}   
+}
 
 
 @media only screen and (min-width:1024px) {
     .homeimage {
-       height: 100%;
-       width: auto;
+        height: 100%;
+        width: auto;
     }
 }
 
@@ -1104,7 +1112,7 @@ quality-active-selection {
 .alert-container-2 {
     position: absolute;
     top: 0;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     z-index: 998;
 }
