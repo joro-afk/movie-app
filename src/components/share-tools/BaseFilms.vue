@@ -1,24 +1,22 @@
 <template>
   <div class="principal" lang="en">
-  
-      <ul class="menu-container">
-        <router-link to="/">
-          <li class="menu home">
-            <img src="@/assets/images/home.png" class="home-img" alt="" />
-          </li>
-        </router-link>
-        <li class="menu" @click="films.setFilms()">Now Playing Movies</li>
-        <li class="menu" @click="films.setFilmsRated()">Top Rated Movies</li>
-        <router-link to="/cart">
-          <li class="menu cart">
-            <img src="@/assets/images/cart.png" class="home-img" alt="" />
-          </li>
-          <li class="menu">
-            <p class="cart-amount">{{ films.items.length }}</p>
-          </li>
-        </router-link>
-      </ul>
- 
+    <ul class="menu-container">
+      <router-link to="/">
+        <li class="menu home">
+          <img src="@/assets/images/home.png" class="home-img" alt="" />
+        </li>
+      </router-link>
+      <li class="menu" @click="films.setFilms()">Now Playing Movies</li>
+      <li class="menu" @click="films.setFilmsRated()">Top Rated Movies</li>
+      <router-link to="/cart">
+        <li class="menu cart">
+          <img src="@/assets/images/cart.png" class="home-img" alt="" />
+        </li>
+        <li class="menu">
+          <p class="cart-amount">{{ films.items.length }}</p>
+        </li>
+      </router-link>
+    </ul>
 
     <swiper
       :slidesPerView="'auto'"
@@ -94,7 +92,7 @@
                   </li>
                 </ul>
                 <div class="to-cart">
-                  <h3>Quality {{ qtyChosen }} us${{ picked }}</h3>
+                  <h3>Quality {{ qtyChosen }} us$ {{ picked }}</h3>
                   <button
                     class="purchate-button"
                     @click="films.addToCart(swiper, picked)"
@@ -112,22 +110,26 @@
       <div class="alert-back"></div>
       <div class="alert-message">
         <div class="alert-button-container">
-        <button class="alert-button" @click="films.closeButton()">X</button>
-      </div>
-      <div class="message-container">
-        <h1 class="message"> Upps! It seems like you already have this in your cart </h1>
-      </div>
+          <button class="alert-button" @click="films.closeButton()">X</button>
+        </div>
+        <div class="message-container">
+          <h1 class="message">
+            Upps! It seems like you already have this in your cart
+          </h1>
+        </div>
       </div>
     </div>
     <div class="alert-container-2">
       <div class="alert-back"></div>
       <div class="alert-message-2">
         <div class="alert-button-container">
-        <button class="alert-button-2" @click="films.closeButton2()">X</button>
-      </div>
-      <div class="message-container">
-        <h1 class="message-2">You must choose quality first...</h1>
-      </div>
+          <button class="alert-button-2" @click="films.closeButton2()">
+            X
+          </button>
+        </div>
+        <div class="message-container">
+          <h1 class="message-2">You must choose quality first...</h1>
+        </div>
       </div>
     </div>
 

@@ -1,25 +1,24 @@
 <template>
   <div class="cart-main">
-
-      <ul class="menu-container">
-        <router-link to="/">
-          <li class="menu home">
-            <img src="@/assets/images/home.png" class="home-img" alt="" />
-          </li>
-        </router-link>
-        <div class="views">
-          <li>
-            <router-link to="/films">
-              <h1 class="menu">Films</h1>
-            </router-link>
-          </li>
-          <li>
-            <router-link to="/tvshows">
-              <h1 class="menu">TV Shows</h1>
-            </router-link>
-          </li>
-        </div>
-      </ul>
+    <ul class="menu-container">
+      <router-link to="/">
+        <li class="menu home">
+          <img src="@/assets/images/home.png" class="home-img" alt="" />
+        </li>
+      </router-link>
+      <div class="views">
+        <li>
+          <router-link to="/films">
+            <h1 class="menu">Films</h1>
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/tvshows">
+            <h1 class="menu">TV Shows</h1>
+          </router-link>
+        </li>
+      </div>
+    </ul>
     <div class="cart-list">
       <li class="li-cart" v-for="index in cart.items" :key="index">
         <div class="cart-divs" id="image-cart">
@@ -48,7 +47,7 @@
         </div>
 
         <div class="cart-divs" id="price">
-          <h2 class="cart-price">{{ index.price }}</h2>
+          <h2 class="cart-price">us$ {{ index.price }}</h2>
         </div>
 
         <div class="cart-divs" id="delete">
@@ -68,7 +67,7 @@
         <h3>{{ cart.sum }}</h3>
       </div>
 
-      <div class="total-containers">  <button>Buy</button></div>
+      <div class="total-containers"><button class="buy-button">Buy</button></div>
     </div>
   </div>
 </template>

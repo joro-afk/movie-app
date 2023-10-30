@@ -44,9 +44,10 @@ h3 {
     margin: 0;
 }
 
-.main-wrapper{
-    height: auto ;
+.main-wrapper {
+    height: auto;
 }
+
 .newHeight {
     height: 100vh;
     overflow: hidden;
@@ -292,7 +293,7 @@ h3 {
     justify-content: center;
     list-style: none;
     color: #fff;
-    font-size: .8em;
+    font-size: .85em;
     font-family: 'Blockletter';
     margin-inline-end: .25rem;
     margin-inline-start: .25rem;
@@ -350,7 +351,7 @@ h3 {
 
 @media only screen and (min-height:690px) {
     .home-img {
-        height: 1em;
+        height: 1.25em;
     }
 }
 
@@ -396,8 +397,9 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: .25rem;
+    box-shadow: 0px 0px 24px 6px #000 inset;
 }
-
 
 @media only screen and (min-width:1000px) {
     .img-container {
@@ -406,18 +408,14 @@ h3 {
 }
 
 .homeimage {
-    /* height: auto;
-    width: 100%;*/
     aspect-ratio: 2/3;
-    height: 80vh;
     width: auto;
+    max-height: 50vh;
 }
 
-
-@media only screen and (min-width:1024px) {
+@media only screen and (min-width:1000px) {
     .homeimage {
-        height: 100%;
-        width: auto;
+        max-height: 100%;
     }
 }
 
@@ -824,26 +822,13 @@ quality-active-selection {
 .li-cart {
     display: flex;
     flex-direction: row;
+    width: calc(100% - .25rem);
     padding: 0.125rem;
     align-items: center;
     justify-content: space-evenly;
-    margin: .25rem 0;
+    margin-bottom: .25rem;
     background: rgb(2, 0, 36);
     background: linear-gradient(45deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 33%, rgba(5, 93, 176, 1) 66%, rgba(0, 212, 255, 1) 100%);
-}
-
-@media only screen and (min-width:800px) {
-    .li-cart {
-        width: 90%;
-        border-radius: .25rem;
-    }
-}
-
-@media only screen and (min-width:1000px) {
-    .li-cart {
-        width: 80%;
-        border-radius: .25rem;
-    }
 }
 
 .cart-divs {
@@ -951,6 +936,7 @@ quality-active-selection {
 .total-containers>h3 {
     font-size: .4rem;
     border-radius: 2px;
+    color: #fff;
 }
 
 @media only screen and (min-width:300px) {
@@ -1102,6 +1088,13 @@ quality-active-selection {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.buy-button{
+    border-radius: .25rem;
+    border: none;
+    background-color: #fff;
+    padding: .25rem;
 }
 
 #first {

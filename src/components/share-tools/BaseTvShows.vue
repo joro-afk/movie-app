@@ -1,25 +1,24 @@
 <template>
   <div class="principal">
-   
-      <ul class="menu-container">
-        <router-link to="/">
-          <li class="menu home">
-            <img src="@/assets/images/home.png" class="home-img" alt="" />
-          </li>
-        </router-link>
-        <li class="menu" @click="tvshows.setTvShows()">On the air Tv shows</li>
-        <li class="menu" @click="tvshows.setTvShowsRated()">
-          Top rated Tv shows
+    <ul class="menu-container">
+      <router-link to="/">
+        <li class="menu home">
+          <img src="@/assets/images/home.png" class="home-img" alt="" />
         </li>
-        <router-link to="/cart">
-          <li class="menu cart">
-            <img src="@/assets/images/cart.png" class="home-img" alt="" />
-          </li>
-          <li class="menu">
-            <p class="cart-amount">{{ tvshows.items.length }}</p>
-          </li>
-        </router-link>
-      </ul>
+      </router-link>
+      <li class="menu" @click="tvshows.setTvShows()">On the air Tv shows</li>
+      <li class="menu" @click="tvshows.setTvShowsRated()">
+        Top rated Tv shows
+      </li>
+      <router-link to="/cart">
+        <li class="menu cart">
+          <img src="@/assets/images/cart.png" class="home-img" alt="" />
+        </li>
+        <li class="menu">
+          <p class="cart-amount">{{ tvshows.items.length }}</p>
+        </li>
+      </router-link>
+    </ul>
 
     <swiper
       :slidesPerView="'auto'"
@@ -101,7 +100,7 @@
                   </li>
                 </ul>
                 <div class="to-cart">
-                  <h3>Quality {{ qtyChosen }} us${{ picked }}</h3>
+                  <h3>Quality {{ qtyChosen }} us$ {{ picked }}</h3>
                   <button
                     class="purchate-button"
                     @click="tvshows.addToCart(swiper, picked)"
