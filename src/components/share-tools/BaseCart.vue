@@ -19,8 +19,10 @@
         </li>
       </div>
     </ul>
+
     <div class="cart-list">
-      <li class="li-cart" v-for="index in cart.items" :key="index">
+      <!-- Iterate through the cart items -->
+      <li class="li-cart" v-for="index in cart.items" :key="index.id">
         <div class="cart-divs" id="image-cart">
           <img
             class="cart-image"
@@ -29,14 +31,15 @@
         </div>
         <div class="cart-divs" id="movie-title">
           <h2 class="cart-title">
-            {{ index.original_title }} {{ index.name }}
+            {{ index.original_title || index.name }}
           </h2>
         </div>
         <div class="cart-divs" id="quality">
-          <h2 class="cart-quality">Quality choosen: {{ index.quality }}</h2>
+          <h2 class="cart-quality">Quality chosen: {{ index.quality }}</h2>
           <select
             name="quality"
             id="qty"
+            v-model="index.price"
             @change="cart.onChange(index, $event)"
           >
             <option value="4">480Q</option>
@@ -57,6 +60,8 @@
         </div>
       </li>
     </div>
+
+    <!-- Display the total -->
     <div class="total">
       <div class="total-containers"></div>
       <div class="total-containers"></div>
@@ -64,19 +69,21 @@
         <h3>Total</h3>
       </div>
       <div class="total-containers">
-        <h3>{{ cart.sum }}</h3>
+        <h3>{{ cart.sum.toFixed(2) }}</h3>
       </div>
 
-      <div class="total-containers"><button class="buy-button">Buy</button></div>
+      <div class="total-containers">
+        <button class="buy-button">Buy</button>
+      </div>
     </div>
   </div>
 </template>
+
 <script>
 import { useFilmsStore } from "../stores/filmsStore";
 
 export default {
   name: "BaseCart",
-  components: {},
   setup() {
     const cart = useFilmsStore();
 
